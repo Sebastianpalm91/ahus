@@ -11,4 +11,8 @@
 |
 */
 
-Route::get('/', 'PagesController@index')->name('home');
+Route::get('/user', 'PagesController@user')->name('user');
+
+Route::get('/news', 'PagesController@news')->name('news');
+
+Route::get('/issue', 'PagesController@issue')->name('issue');
