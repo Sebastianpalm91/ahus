@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/user', 'PagesController@user')->name('user');
+Route::get('/user/{id?}', 'PagesController@user')->name('user');
 
-Route::get('/news', 'PagesController@news')->name('news');
+Route::get('/news/{id?}', 'PagesController@news')->name('news');
 
 Route::get('/issue/{id?}', 'PagesController@issue')->name('issue');
