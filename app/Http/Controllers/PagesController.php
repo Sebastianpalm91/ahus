@@ -18,9 +18,13 @@ class PagesController extends Controller
         ]);
     }
 
-    public function issue()
+    public function issue($id = null)
     {
-        $issue = Issue::get();
+        if($id === null){
+            $issue = Issue::get();
+        }
+        else if(Issue::find($id) || abort(500)) $issue = Issue::where('id', $id)->get();
+         
 
         return response()->json([
             'issues' => $issue,
