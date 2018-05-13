@@ -10,8 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/wah, PagesController@wah')->name("wah");
-
 Route::get('/user/{id?}', 'PagesController@user')->name('user');
 
 Route::get('/news/{id?}', 'PagesController@news')->name('news');

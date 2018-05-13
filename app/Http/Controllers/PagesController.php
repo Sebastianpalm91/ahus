@@ -17,6 +17,7 @@ class PagesController extends Controller
 
         return response()->json([
             'users' => $user,
+            "csrf" => csrf_token()
         ]);
     }
     public function news($id = null)
@@ -31,13 +32,7 @@ class PagesController extends Controller
         }
         return response()->json([
             'news' => $news,
-        ]);
-    }
-
-    public function wah()
-    {
-        return response()->json([
-            'news' => "news",
+            "csrf" => csrf_token()
         ]);
     }
 }
