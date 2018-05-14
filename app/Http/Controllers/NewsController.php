@@ -3,32 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Issue;
+use App\NewsFeed;
 
-class IssueController extends Controller
+class NewsController extends Controller
 {
     function get($id = null) {
         if($id === null){
-            $issue = Issue::get();
-        } else if(Issue::find($id) || abort(500)) $issue = Issue::where('id', $id)->get();
+            $news = NewsFeed::get();
+        } else if(NewsFeed::find($id) || abort(500)) $news = NewsFeed::where('id', $id)->get();
          
 
         return response()->json([
-            'issues' => $issue,
+            'news' => $news,
         ]);
     }
 
     function post(Request $request) {
         if(!$request->has('title', 'body', 'location', 'name')) return response()->json(['error' => true, 'info' => 'Missing parameters']);
 
-        $issue = new Issue;
+        $news = new Issue;
 
-        $issue->title = $request->title;
-        $issue->body = $request->body;
-        $issue->location = $request->location;
-        $issue->name = $request->name;
+        $news->title = $request->title;
+        $news->body = $request->body;
+        $news->location = $request->location;
+        $news->name = $request->name;
 
-        $issue->save();
+        $news->save();
 
         return response()->json([
             "status" => "Might have worked"

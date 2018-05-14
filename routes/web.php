@@ -10,9 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/user/{id?}', 'PagesController@user')->name('user');
+Route::get('/issue/{id?}', 'IssueController@get');
+Route::post('/issue', 'IssueController@post');
+Route::put('/issue/{id}, IssueController@put');
+Route::delete('/issue/{id}, IssueController@delete');
 
-Route::get('/news/{id?}', 'PagesController@news')->name('news');
+Route::get('/news/{id?}', 'NewsController@get');
+Route::post('/news', 'NewsController@post');
+Route::put('/news/{id}, NewsController@put');
+Route::delete('/news/{id}, NewsController@delete');
 
-Route::get('/issue/{id?}', 'IssueController@get')->name('issue');
-Route::post('/issue', 'IssueController@post')->middleware('auth');
+Route::get('/user/{id?}', 'UserController@get');
+Route::get('/token', 'UserController@token');
+Route::post('/user', 'UserController@post');
+Route::put('/user/{id}, UserController@put');
+Route::delete('/user/{id}, UserController@delete');
