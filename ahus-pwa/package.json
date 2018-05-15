@@ -1,0 +1,29 @@
+{
+  "name": "ahus-pwa",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "node-sass": "^4.9.0",
+    "npm": "^6.0.1",
+    "push.js": "^1.0.5",
+    "react": "^16.3.2",
+    "react-burger-menu": "^2.4.4",
+    "react-dom": "^16.3.2",
+    "react-router": "^3.2.1",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "styled-components": "^3.2.6",
+    "web-push": "^3.3.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "watch:styles": "node-sass --source-map true --watch src/Assets/Styles/Src/App.scss src/Assets/Styles/Public/App.css",
+    "watch": "npm-run-all --parallel start watch:styles",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.3"
+  }
+}

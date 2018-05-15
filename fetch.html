@@ -9,9 +9,9 @@
     <body>
         <script>
 
-        const api = 'http://127.0.0.1:8000';
+        const api = 'http://127.0.0.1:8000/news';
 
-        fetch('http://127.0.0.1:8000')
+        fetch(api)
             .then(response => response.json())
             .then(res => console.log(res))
         </script>
