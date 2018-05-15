@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import { Link } from 'react-router-dom'
-
+import { breakpoint } from '../../Assets/Scripts/theme/mixins';
 // Navigation
 export const NavigationContainer = styled.header`
     height: 100vh;
     width: 160px;
     background-color: #e37979;
+    ${breakpoint.down('m')`
+        display: none;`
+    }
 `;
 
 export const Li = styled.li`
@@ -55,6 +58,9 @@ export const HeaderContainer = styled.header`
     height: 48px;
     top: 0;
     background-color: #B6B6B6;
+    ${breakpoint.down('m')`
+        display: none;
+    `}
 `;
 
 export const HeaderText = styled.h1`

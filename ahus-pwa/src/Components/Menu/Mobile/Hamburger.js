@@ -19,7 +19,7 @@ var styles = {
     top: '36px'
   },
   bmBurgerBars: {
-    background: '#373a47'
+    background: '#ffffff'
   },
   bmCrossButton: {
     height: '24px',

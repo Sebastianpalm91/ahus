@@ -1,11 +1,11 @@
 import React from 'react';
-import { HomeContainer, TitleNavigation, HomeTextContainer, HomeWrapper, HomeContainerText, HomeTitle, HomeTitleSub, HomeWrapperText, HomeText } from './styles';
+import { HomeContainer, TitleNavigationCampus, TitleNavigation, HomeTextContainer, HomeWrapper, HomeContainerText, HomeTitle, HomeTitleSub, HomeWrapperText, HomeText } from './styles';
 
 const Settings = () => (
   <HomeContainer>
       <HomeTextContainer>
           <TitleNavigation>Hem</TitleNavigation>
-          <TitleNavigation>Campus | Helsingborg</TitleNavigation>
+          <TitleNavigationCampus>Campus | Helsingborg</TitleNavigationCampus>
       </HomeTextContainer>
       <HomeWrapper>
           <HomeContainerText>

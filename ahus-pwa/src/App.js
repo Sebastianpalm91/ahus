@@ -5,6 +5,7 @@ import Navigation from './Components/Partials/Navigation';
 import Main from './Components/Main/Main';
 import Hamburger from './Components/Menu/Mobile/Hamburger';
 import styled from "styled-components";
+import { MainContainer } from './Assets/Styles/Src/App.js';
 
 class App extends Component {
   render() {
@@ -20,11 +21,5 @@ class App extends Component {
     );
   }
 }
-
-const MainContainer = styled.div `
-    height: 100%;
-    width: 100%;
-    display: flex;
-`
 
 export default App;

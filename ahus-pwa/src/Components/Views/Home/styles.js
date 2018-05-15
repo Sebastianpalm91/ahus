@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 
 export const HomeContainer = styled.div `
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-`
+`;
 
 export const TitleNavigation = styled.h1`
   font-size: 1.5em;
@@ -16,6 +17,20 @@ export const TitleNavigation = styled.h1`
   margin: 0px;
   padding-left: 32px;
   padding-right: 32px;
+`;
+
+export const TitleNavigationCampus = styled.h1`
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 30px;
+  margin: 0px;
+  padding-left: 32px;
+  padding-right: 32px;
+  ${breakpoint.down('m')`
+      display: none;
+  `}
 `;
 
 export const HomeTextContainer = styled.div`
@@ -36,6 +51,9 @@ export const HomeWrapper = styled.div`
     width: 640px;
     border-radius: 5px;
     background-color: #F2F1EA;
+    ${breakpoint.down('m')`
+        width: 100vw;
+    `}
 `;
 
 export const HomeContainerText = styled.div`
@@ -44,6 +62,9 @@ export const HomeContainerText = styled.div`
     width: 576px;
     border-radius: 5px;
     background-color: #686868;
+    ${breakpoint.down('m')`
+        width: 100vw;
+    `}
 `;
 
 export const HomeWrapperText = styled.div`
