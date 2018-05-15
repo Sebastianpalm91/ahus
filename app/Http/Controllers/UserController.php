@@ -35,7 +35,22 @@ class UserController extends Controller
     }
 
     function put($id){
+        $r = request();
 
+        $user = User::where('id', $id)->get();
+
+        if($r->has('email'))
+            $user->email = request()->email;
+        if($r->has('password'))
+            $user->password = bcrypt(request()->password);
+        if($r->has('name'))
+            $user->name = request()->name;
+
+        $user->save();
+
+        return response()->json([
+            "status" => "Might have worked"
+        ]);
     }
 
     function delete($id){

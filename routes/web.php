@@ -23,5 +23,5 @@ Route::delete('/news/{id}, NewsController@delete');
 Route::get('/user/{id?}', 'UserController@get');
 Route::get('/token', 'UserController@token');
 Route::post('/user', 'UserController@post');
-Route::put('/user/{id}, UserController@put');
+Route::put('/user/{id}/edit, UserController@put');
 Route::delete('/user/{id}, UserController@delete');
