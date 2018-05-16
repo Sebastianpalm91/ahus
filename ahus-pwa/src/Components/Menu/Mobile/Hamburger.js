@@ -1,9 +1,9 @@
 import React from 'react';
 import { Li, StyledLink, Logo, MenuWrapper } from './styles';
-import { bubble as Menu } from 'react-burger-menu'
+import { stack as Menu } from 'react-burger-menu'
 const Hamburger = () => (
     <MenuWrapper>
-        <Menu styles={ styles } right>
+        <Menu isOpen={ false } styles={ styles } right>
             <StyledLink to='/'><Logo></Logo></StyledLink>
                     <Li><StyledLink className="menu-item" to='/felanmalan'>Felanmälan</StyledLink></Li>
                     <Li><StyledLink className="menu-item" to='/nyheter'>Nyheter</StyledLink></Li>
@@ -39,6 +39,7 @@ var styles = {
   },
   bmItemList: {
     color: '#b8b7ad',
+
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)'

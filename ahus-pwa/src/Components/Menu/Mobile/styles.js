@@ -6,7 +6,6 @@ export const Li = styled.li`
     padding: 20px;
     list-style: none;
     justify-content: center;
-    border-bottom: 1px solid #dadada;
 `;
 
 export const StyledLink = styled(Link)`
