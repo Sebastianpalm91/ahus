@@ -1,14 +1,16 @@
 import React from 'react';
-import { Li, StyledLink, Logo } from './styles';
+import { Li, StyledLink, Logo, MenuWrapper } from './styles';
 import { bubble as Menu } from 'react-burger-menu'
 const Hamburger = () => (
-    <Menu styles={ styles } right>
-        <StyledLink to='/'><Logo></Logo></StyledLink>
-                <Li><StyledLink className="menu-item" to='/felanmalan'>Felanmälan</StyledLink></Li>
-                <Li><StyledLink className="menu-item" to='/nyheter'>Nyheter</StyledLink></Li>
-                <Li><StyledLink className="menu-item" to='/kontakt'>Kontakt</StyledLink></Li>
-                <Li><StyledLink className="menu-item" to='/dinfastiget'>Din Fastighet</StyledLink></Li>
-    </Menu>
+    <MenuWrapper>
+        <Menu styles={ styles } right>
+            <StyledLink to='/'><Logo></Logo></StyledLink>
+                    <Li><StyledLink className="menu-item" to='/felanmalan'>Felanmälan</StyledLink></Li>
+                    <Li><StyledLink className="menu-item" to='/nyheter'>Nyheter</StyledLink></Li>
+                    <Li><StyledLink className="menu-item" to='/kontakt'>Kontakt</StyledLink></Li>
+                    <Li><StyledLink className="menu-item" to='/dinfastiget'>Din Fastighet</StyledLink></Li>
+        </Menu>
+    </MenuWrapper>
 )
 var styles = {
   bmBurgerButton: {

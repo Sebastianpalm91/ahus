@@ -25,3 +25,7 @@ Route::get('/token', 'UserController@token');
 Route::post('/user', 'UserController@post');
 Route::put('/user/{id}/edit, UserController@put');
 Route::delete('/user/{id}, UserController@delete');
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

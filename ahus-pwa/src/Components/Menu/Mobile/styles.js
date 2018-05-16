@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from 'react-router-dom'
+import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 
 export const Li = styled.li`
     padding: 20px;
@@ -26,4 +27,10 @@ export const Logo = styled.img`
     background-size: contain;
     height: 50px;
     width: 64px;
+`;
+
+export const MenuWrapper = styled.div`
+    ${breakpoint.up('m')`
+        display: none;`
+    }
 `;
