@@ -63,6 +63,11 @@ class UserController extends Controller
                 "status" => "200",
                 "changed" => $changes,
             ]);
+        } else {
+            return response()->json([
+                'status' => '500',
+                'message' => 'User of given ID could not be found'
+            ]);
         }
     }
 
@@ -74,6 +79,11 @@ class UserController extends Controller
                     'message' => 'User deleted successfully'
                 ]); 
             }
+        } else {
+            return response()->json([
+                'status' => '500',
+                'message' => 'User of given ID could not be found'
+            ]);
         }
     }
 
