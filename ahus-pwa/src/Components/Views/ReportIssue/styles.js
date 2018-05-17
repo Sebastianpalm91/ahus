@@ -3,29 +3,30 @@ import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 
 export const Container = styled.div `
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
 `
 
-export const TitleNavigation = styled.h1`
-  font-size: 1.5em;
-  font-weight: 500;
-  color: #FFFFFF;
-  text-align: center;
-  line-height: 30px;
-  margin: 0px;
-  padding-left: 32px;
-  padding-right: 32px;
-`;
+
 
 export const TextContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 120px;
-    background-color: #4D4D4D;
+    height: 96px;
+    background-color: #E7EDF0;
+    ${breakpoint.down('m')`
+        justify-content: center;
+        height: 78px;
+    `}
+    ${breakpoint.down('s')`
+        height: 78px;
+    `}
+    ${breakpoint.down('xs')`
+        height: 78px;
+    `}
 `;
 
 
@@ -44,7 +45,7 @@ export const InputContainer = styled.form`
 
 export const InputFields = styled.input`
     width: 400px;
-    height: 80px;
+    height: 20px;
     font-size: 16px;
     border-radius: 5px;
     margin-top: 10px;
@@ -55,17 +56,21 @@ export const InputFields = styled.input`
 
     ${breakpoint.down('m')`
         width: 350px;
-        height: 100px;
+        height: 50px;
     `}
     ${breakpoint.down('s')`
-        width: 250px;
-        height: 110px;
+        width: 330px;
+        height: 40px;
+    `}
+    ${breakpoint.down('xs')`
+        width: 260px;
+        height: 30px;
     `}
 `;
 
 export const InputTextArea = styled.textarea`
     width: 400px;
-    height: 250px;
+    height: 150px;
     font-size: 16px;
     border-radius: 5px;
     margin-top: 10px;
@@ -75,12 +80,16 @@ export const InputTextArea = styled.textarea`
     background-color: rgba(62,62,62,0.3);
 
     ${breakpoint.down('m')`
-        height: 350px;
+        height: 80px;
         width: 350px;
     `}
     ${breakpoint.down('s')`
-        height: 450px;
-        width: 250px;
+        height: 80px;
+        width: 330px;
+    `}
+    ${breakpoint.down('xs')`
+        width: 260px;
+        height: 80px;
     `}
 `;
 
@@ -94,10 +103,12 @@ export const SubmitButton = styled.button`
     outline: none;
     background-color: rgba(62,62,62,0.3);
     ${breakpoint.down('m')`
-        height: 130px;
+        height: 80px;
     `}
     ${breakpoint.down('s')`
-        height: 230px;
+        height: 40px;
+        width: 100px;
+        font-size: 18px;
     `}
 `;
 export const IssueContainer = styled.div`
@@ -107,21 +118,27 @@ export const IssueContainer = styled.div`
 `;
 export const IssuesUl = styled.ul`
     list-style-type: none;
-    padding: 20px;
+    padding-left: 0px;
 `;
 
 export const IssueList = styled.li`
     height: 80px;
-    width: 450px;
+    width: 550px;
     padding: 5px;
     margin-top: 10px;
     border-radius: 5px;
     border: 1px solid black;
-    ${breakpoint.down('l')`
+    ${breakpoint.down('m')`
+        height: 80px;
         width: 350px;
     `}
     ${breakpoint.down('s')`
-        width: 250px;
+        height: 80px;
+        width: 330px;
+    `}
+    ${breakpoint.down('xs')`
+        width: 280px;
+        height: 80px;
     `}
 `;
 

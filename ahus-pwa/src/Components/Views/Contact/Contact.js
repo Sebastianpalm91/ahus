@@ -1,12 +1,9 @@
 import React from 'react';
-import { ContactContainer, TitleNavigation, ContactTextContainer } from './styles';
+import { ContactContainer } from './styles';
 
 const Settings = () => (
   <ContactContainer>
-      <ContactTextContainer>
-          <TitleNavigation>Kontakt</TitleNavigation>
-          <TitleNavigation>Campus | Helsingborg</TitleNavigation>
-      </ContactTextContainer>
+
   </ContactContainer>
 )
 

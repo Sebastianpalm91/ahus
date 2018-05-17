@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Container, TitleNavigation, TextContainer, IssueContainer } from './styles';
+import { Container, IssueContainer, TitleCity } from './styles';
 import Form from './Form';
 import GetIssues from './GetIssues';
 class ReportIssue extends Component {
@@ -16,10 +16,6 @@ class ReportIssue extends Component {
     render() {
         return (
             <Container>
-                <TextContainer>
-                    <TitleNavigation>Felanmälan</TitleNavigation>
-                    <TitleNavigation>Campus | Helsingborg</TitleNavigation>
-                </TextContainer>
                 <Form onChange={fields => this.onChange(fields)}/>
                 <IssueContainer>
                     <GetIssues></GetIssues>

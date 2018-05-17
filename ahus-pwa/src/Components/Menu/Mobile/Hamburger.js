@@ -4,11 +4,11 @@ import { stack as Menu } from 'react-burger-menu'
 const Hamburger = () => (
     <MenuWrapper>
         <Menu isOpen={ false } styles={ styles } right>
-            <StyledLink to='/'><Logo></Logo></StyledLink>
-                    <Li><StyledLink className="menu-item" to='/felanmalan'>Felanmälan</StyledLink></Li>
-                    <Li><StyledLink className="menu-item" to='/nyheter'>Nyheter</StyledLink></Li>
-                    <Li><StyledLink className="menu-item" to='/kontakt'>Kontakt</StyledLink></Li>
-                    <Li><StyledLink className="menu-item" to='/dinfastiget'>Din Fastighet</StyledLink></Li>
+            <Li><StyledLink className="menu-item" to='/'>Hem</StyledLink></Li>
+            <Li><StyledLink className="menu-item" to='/felanmalan'>Felanmälan</StyledLink></Li>
+            <Li><StyledLink className="menu-item" to='/nyheter'>Nyheter</StyledLink></Li>
+            <Li><StyledLink className="menu-item" to='/kontakt'>Kontakt</StyledLink></Li>
+            <Li><StyledLink className="menu-item" to='/dinfastiget'>Din Fastighet</StyledLink></Li>
         </Menu>
     </MenuWrapper>
 )
@@ -18,7 +18,7 @@ var styles = {
     width: '36px',
     height: '30px',
     right: '36px',
-    top: '36px'
+    top: '25px'
   },
   bmBurgerBars: {
     background: '#ffffff'
