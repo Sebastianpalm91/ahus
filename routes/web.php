@@ -12,19 +12,19 @@
 */
 Route::get('/issue/{id?}', 'IssueController@get');
 Route::post('/issue', 'IssueController@post');
-Route::put('/issue/{id}, IssueController@put');
-Route::delete('/issue/{id}, IssueController@delete');
+Route::put('/issue/{id}', 'IssueController@put');
+Route::delete('/issue/{id}', 'IssueController@delete');
 
 Route::get('/news/{id?}', 'NewsController@get');
 Route::post('/news', 'NewsController@post');
-Route::put('/news/{id}, NewsController@put');
-Route::delete('/news/{id}, NewsController@delete');
+Route::put('/news/{id}', 'NewsController@put');
+Route::delete('/news/{id}', 'NewsController@delete');
 
 Route::get('/user/{id?}', 'UserController@get');
 Route::get('/token', 'UserController@token');
 Route::post('/user', 'UserController@post');
-Route::put('/user/{id}/edit, UserController@put');
-Route::delete('/user/{id}, UserController@delete');
+Route::put('/user/{id}', 'UserController@put');
+Route::delete('/user/{id}', 'UserController@delete');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
