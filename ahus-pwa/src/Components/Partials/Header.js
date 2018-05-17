@@ -7,8 +7,7 @@ import { HeaderContainer, HeaderText, StyledLinkAdmin } from './styles';
 const Header = () => (
   <HeaderContainer>
       <HeaderText>Akademiska Hus WebbApp</HeaderText>
-          <StyledLinkAdmin to='/'>Admin Login</StyledLinkAdmin>
-
+          <StyledLinkAdmin to='/admin/login'>Admin Login</StyledLinkAdmin>
   </HeaderContainer>
 )
 
