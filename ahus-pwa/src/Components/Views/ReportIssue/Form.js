@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { InputFields, SubmitButton, InputContainer } from './styles';
+import { InputFields, SubmitButton, InputContainer, InputTextArea } from './styles';
 import axios from 'axios';
 
 class Form extends Component {
@@ -24,24 +24,16 @@ class Form extends Component {
             name: "",
             location: ""
         });
-        const token = axios.get(`http://127.0.0.1:8000/token`)
-            .then(res => {
-            const issues = res.data.token;
-            console.log(issues);
-            return issues;
-        });
+
         const postIssue = {
-            _token: this.token,
             title: this.state.title,
             body: this.state.body,
             name: this.state.name,
             location: this.state.location
         };
 
-        axios.post(`http://127.0.0.1:8000/issue`, { postIssue })
+        axios.post(`http://127.0.0.1:8000/api/issue`, postIssue )
           .then(res => {
-            console.log(res);
-            console.log(postIssue);
           })
     };
     render() {
@@ -53,7 +45,7 @@ class Form extends Component {
                 placeholder="Titel"
                 onChange={e => this.change(e)}
             />
-            <InputFields type="text"
+            <InputTextArea type="text"
                 name="body"
                 value={this.state.body}
                 placeholder="Beskrivning"
@@ -71,7 +63,7 @@ class Form extends Component {
                 placeholder="Plats"
                 onChange={e => this.change(e)}
             />
-        <SubmitButton>Submit</SubmitButton>
+        <SubmitButton type="submit">Skicka</SubmitButton>
         </InputContainer>
       );
     }

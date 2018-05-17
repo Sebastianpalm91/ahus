@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
-import { Container, TitleNavigation, TextContainer, Issues } from './styles';
+import { Container, TitleNavigation, TextContainer, IssueContainer } from './styles';
 import Form from './Form';
 import GetIssues from './GetIssues';
 class ReportIssue extends Component {
     state = {
-        fields: {}
+        fields: []
     };
     onChange = updatedValue => {
         this.setState({
@@ -21,10 +21,10 @@ class ReportIssue extends Component {
                     <TitleNavigation>Campus | Helsingborg</TitleNavigation>
                 </TextContainer>
                 <Form onChange={fields => this.onChange(fields)}/>
-                <Issues>
+                <IssueContainer>
                     <GetIssues></GetIssues>
-                </Issues>
-                <p>{JSON.stringify(this.state.fields, null, 2)}</p>
+                </IssueContainer>
+                <p>{this.state.fields.title}{this.state.fields.body}{this.state.fields.name}</p>
             </Container>
         )
     }

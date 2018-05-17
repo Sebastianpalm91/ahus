@@ -1,6 +1,6 @@
 import React from 'react';
-
 import axios from 'axios';
+import { IssuesUl, IssueList, Title, Body } from './styles';
 
 export default class PersonList extends React.Component {
   state = {
@@ -8,7 +8,7 @@ export default class PersonList extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`http://127.0.0.1:8000/issue`)
+    axios.get(`http://127.0.0.1:8000/api/issue`)
       .then(res => {
         const issues = res.data.issues;
         this.setState({ issues });
@@ -17,9 +17,9 @@ export default class PersonList extends React.Component {
 
   render() {
     return (
-      <ul>
-        { this.state.issues.map(issue => <li>{issue.title}, {issue.body}</li>)}
-      </ul>
+        <IssuesUl>
+            { this.state.issues.map(issue => <IssueList key={issue.id}> <Title>{issue.title}</Title> <Body>{issue.body}</Body></IssueList>)}
+        </IssuesUl>
     )
   }
 }
