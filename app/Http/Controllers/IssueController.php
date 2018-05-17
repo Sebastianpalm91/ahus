@@ -24,10 +24,10 @@ class IssueController extends Controller
 
         $issue = new Issue;
 
-        $issue->title = $request->title;
-        $issue->body = $request->body;
-        $issue->location = $request->location;
-        $issue->name = $request->name;
+        $issue->title = Binput::get('title');
+        $issue->body = Binput::get('body');
+        $issue->location = Binput::get('location');
+        $issue->name = Binput::get('name');
 
         $issue->save();
 
