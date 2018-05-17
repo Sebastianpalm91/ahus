@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use GrahamCampbell\Binput\Facades\Binput;
 use App\User;
 
 class UserController extends Controller
@@ -37,26 +38,43 @@ class UserController extends Controller
     function put($id){
         $r = request();
 
-        $user = User::where('id', $id)->get();
+        $changes = [];
 
-        if($r->has('email'))
-            $user->email = request()->email;
-        if($r->has('password'))
-            $user->password = bcrypt(request()->password);
-        if($r->has('name'))
-            $user->name = request()->name;
+        if($user = User::find($id)){
+            if($r->has('email') && $user->email !== Binput::get('email')){
+                if($user->update(Binput::only('email'))){
+                    array_push($changes, "email");
+                }
+            }
 
-        $user->save();
+            if($r->has('password') && strlen(Binput::get('password')) > 0){
+                if($user->update(['password' => bcrypt(Binput::get('password'))])){
+                    array_push($changes, 'password');
+                }
+            }
 
-        return response()->json([
-            "status" => "Might have worked"
-        ]);
+            if($r->has('name') && $user->name != Binput::get('name')){
+                if($user->update(Binput::only('name'))){
+                    array_push($changes, "name");
+                }
+            }
+
+            return response()->json([
+                "status" => "200",
+                "changed" => $changes,
+            ]);
+        }
     }
 
     function delete($id){
-        return response()->json([
-            'delete' => "true"
-        ]);
+        if($user = User::find($id)){
+            if($user->delete()){
+                return response()->json([
+                    'status' => "200",
+                    'message' => 'User deleted successfully'
+                ]); 
+            }
+        }
     }
 
     public function token(){
