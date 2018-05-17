@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderContainer, HeaderText } from './styles';
+import { HeaderContainer, HeaderText, StyledLinkAdmin } from './styles';
 
 
 // The Header creates links that can be used to navigate
@@ -7,6 +7,8 @@ import { HeaderContainer, HeaderText } from './styles';
 const Header = () => (
   <HeaderContainer>
       <HeaderText>Akademiska Hus WebbApp</HeaderText>
+          <StyledLinkAdmin to='/'>Admin Login</StyledLinkAdmin>
+
   </HeaderContainer>
 )
 

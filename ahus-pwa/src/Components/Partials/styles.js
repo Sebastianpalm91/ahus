@@ -27,6 +27,15 @@ export const StyledLink = styled(Link)`
         color: black;
     }
 `;
+export const StyledLinkAdmin = styled(Link)`
+    font-size: 1em;
+    color: #1c1c1c;
+    padding: 48px;
+    text-decoration: none;
+    &:hover {
+        color: black;
+    }
+`;
 
 export const Ul = styled.ul`
     margin: 0px;
@@ -55,6 +64,7 @@ export const Logo = styled.img`
 export const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 48px;
     top: 0;
