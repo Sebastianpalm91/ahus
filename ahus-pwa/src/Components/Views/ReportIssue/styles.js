@@ -22,27 +22,6 @@ export const Wrapper = styled.div `
     `}
 `;
 
-
-export const TextContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 96px;
-    background-color: #E7EDF0;
-    ${breakpoint.down('m')`
-        justify-content: center;
-        height: 78px;
-    `}
-    ${breakpoint.down('s')`
-        height: 78px;
-    `}
-    ${breakpoint.down('xs')`
-        height: 78px;
-    `}
-`;
-
-
 // INPUT/FORM STYLE
 //
 export const InputContainer = styled.form`
