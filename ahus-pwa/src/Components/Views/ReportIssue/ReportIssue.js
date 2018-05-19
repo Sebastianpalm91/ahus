@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import { Container, IssueContainer, TitleCity } from './styles';
 import Form from './Form';
 import GetIssues from './GetIssues';
+import AnimatedWrapper from '../../AnimatedWrapper/AnimatedWrapper';
+
 class ReportIssue extends Component {
     state = {
         fields: []
@@ -25,5 +27,5 @@ class ReportIssue extends Component {
         )
     }
 }
-
-export default ReportIssue
+const Report = AnimatedWrapper(ReportIssue);
+export default Report
