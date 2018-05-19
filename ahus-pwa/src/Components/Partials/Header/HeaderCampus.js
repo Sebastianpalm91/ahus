@@ -1,14 +1,14 @@
 import React from 'react';
-import { HeaderCampusContainer, HeaderText, StyledLink, Logo } from './styles';
+import { CampusContainer, Text, StyledLink, Logo } from './styles';
 
 
 // The Header creates links that can be used to navigate
 // between routes.
 const HeaderCampus = () => (
-  <HeaderCampusContainer>
+  <CampusContainer>
       <StyledLink to='/'><Logo></Logo></StyledLink>
-      <HeaderText>Campus | Helsingborg</HeaderText>
-  </HeaderCampusContainer>
+      <Text>Campus | Helsingborg</Text>
+  </CampusContainer>
 )
 
 export default HeaderCampus

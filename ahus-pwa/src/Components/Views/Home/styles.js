@@ -1,15 +1,19 @@
 import styled from "styled-components";
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
+import bg from '../../../Assets/Images/homescreen.png'
 
-export const HomeContainer = styled.div `
+export const Container = styled.div `
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    background-image: url(${bg});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 `;
 
-// export const HomeTextContainer = styled.div`
+// export const TextContainer = styled.div`
 //     display: flex;
 //     justify-content: space-between;
 //     align-items: center;
@@ -27,45 +31,29 @@ export const HomeContainer = styled.div `
 //     `}
 // `;
 
-export const HomeWrapper = styled.div`
+export const Wrapper = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 10px;
-    margin-top: 45px;
-    height: 368px;
-    border-radius: 5px;
-    background-color: #F2F1EA;
+    padding: 50px;
     ${breakpoint.down('s')`
-        width: 330px;
+        padding: 20px;
     `}
     ${breakpoint.down('xs')`
-        width: 280px;
+        padding: 10px;
     `}
 `;
 
-export const HomeContainerText = styled.div`
+export const ContainerText = styled.div`
     display: inline-block;
-    height: 350px;
     width: 576px;
-    border-radius: 5px;
-    background-color: #686868;
-    ${breakpoint.down('s')`
-        width: 320px;
-    `}
-    ${breakpoint.down('xs')`
-        width: 280px;
-    `}
 `;
 
-export const HomeWrapperText = styled.div`
+export const WrapperText = styled.div`
     display: flex;
     flex-direction: row;
 `;
 
 
-export const HomeTitle = styled.h1`
+export const Title = styled.h1`
     text-align: left;
     color: #FFFFFF;
     font-size: 28px;
@@ -75,9 +63,7 @@ export const HomeTitle = styled.h1`
     padding: 16px;
 `;
 
-export const HomeTitleSub = styled.h4`
-    height: 18px;
-    width: 160px;
+export const TitleSub = styled.h4`
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 500;
@@ -86,9 +72,7 @@ export const HomeTitleSub = styled.h4`
     padding: 0px 16px 0px 16px;
 `;
 
-export const HomeText = styled.p`
-    width: 272px;
-    height: 182px;
+export const Text = styled.p`
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 300;
@@ -105,48 +89,47 @@ export const HomeText = styled.p`
 
 // BUTTON STYLE
 
-export const ButtonWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    margin-top 20px;
-`;
+// export const ButtonWrapper = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     margin-top 20px;
+// `;
 
-export const ButtonCity = styled.button`
-    width: 80px;
-    height: 40px;
-    font-size: 11px;
-    border-radius: 5px;
-    margin: 15px;
-    border: none;
-    outline: none;
-    background-color: rgba(62,62,62,0.3);
-    ${breakpoint.down('m')`
-        height: 50px;
-        width: 150px;
-    `}
-    ${breakpoint.down('s')`
-        height: 40px;
-        width: 100px;
-        font-size: 18px;
-    `}
-`;
-
-export const ButtonCampus = styled.button`
-    width: 80px;
-    height: 40px;
-    font-size: 11px;
-    border-radius: 5px;
-    margin: 15px;
-    border: none;
-    outline: none;
-    background-color: rgba(62,62,62,0.3);
-    ${breakpoint.down('m')`
-        height: 50px;
-        width: 150px;
-    `}
-    ${breakpoint.down('s')`
-        height: 40px;
-        width: 100px;
-        font-size: 18px;
-    `}
-`;
+// export const ButtonCity = styled.button`
+//     width: 80px;
+//     height: 40px;
+//     font-size: 11px;
+//     border-radius: 5px;
+//     margin: 15px;
+//     border: none;
+//     outline: none;
+//     ${breakpoint.down('m')`
+//         height: 50px;
+//         width: 150px;
+//     `}
+//     ${breakpoint.down('s')`
+//         height: 40px;
+//         width: 100px;
+//         font-size: 18px;
+//     `}
+// `;
+//
+// export const ButtonCampus = styled.button`
+//     width: 80px;
+//     height: 40px;
+//     font-size: 11px;
+//     border-radius: 5px;
+//     margin: 15px;
+//     border: none;
+//     outline: none;
+//
+//     ${breakpoint.down('m')`
+//         height: 50px;
+//         width: 150px;
+//     `}
+//     ${breakpoint.down('s')`
+//         height: 40px;
+//         width: 100px;
+//         font-size: 18px;
+//     `}
+// `;
