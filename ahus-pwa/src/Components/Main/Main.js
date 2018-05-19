@@ -29,9 +29,24 @@ class Main extends Component {
                         {match && <Report {...rest} />}
                     </TransitionGroup>
                 )}/>
-                <Route exact path='/nyheter' component={News}/>
-                <Route exact path='/kontakt' component={Contact}/>
-                <Route exact path='/dinfastiget' component={YourRealEstate}/>
+                <Route exact path='/nyheter' children={({ match, ...rest }) => (
+                    <TransitionGroup
+                        component={firstChild}>
+                        {match && <News {...rest} />}
+                    </TransitionGroup>
+                )}/>
+                <Route exact path='/kontakt' children={({ match, ...rest }) => (
+                    <TransitionGroup
+                        component={firstChild}>
+                        {match && <Contact {...rest} />}
+                    </TransitionGroup>
+                )}/>
+                <Route exact path='/dinfastiget' children={({ match, ...rest }) => (
+                    <TransitionGroup
+                        component={firstChild}>
+                        {match && <YourRealEstate {...rest} />}
+                    </TransitionGroup>
+                )}/>
                 <Route exact path='/akademiskahus' component={() => window.location = 'https://akademiskahus.se'}/>/>
                 <Route exact path='/admin/login' component={() => window.location = 'http://127.0.0.1:8000/admin/login'}/>/>
             </Switch>

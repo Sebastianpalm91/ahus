@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Container, ItemContainer, Items, ContactInfo, ContactPicture, ContactText, Picture } from './styles';
+import AnimatedWrapper from '../../AnimatedWrapper/AnimatedWrapper';
 
-
-class ContactList extends Component {
+class ContactListComponent extends Component {
   state = {
     users: []
   }
@@ -39,5 +39,5 @@ class ContactList extends Component {
     )
   }
 }
-
-export default ContactList
+const Contact = AnimatedWrapper(ContactListComponent);
+export default Contact;

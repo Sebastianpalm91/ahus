@@ -3,20 +3,18 @@ import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 
 export const Container = styled.div `
     display: flex;
-    flex-direction row;
+    flex-direction column;
     justify-content: center;
     background-color: #FFFFFF;
     width: 100%;
     margin: 0 auto;
     padding-top: 64px;
-    ${breakpoint.down('l')`
-        flex-direction column;
-    `}
 `
 export const ItemContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    justify-content: center;
+    margin: 16px;
 `;
 
 export const Items = styled.div`
@@ -25,16 +23,17 @@ export const Items = styled.div`
     width: 416px;
     height: 96px;
     background-color: #EAEFE9;
-    margin: 16px;
+    margin: 0 auto;
+
     padding: 15px;
-    ${breakpoint.down('xl')`
-        width: 400px;
-    `}
     ${breakpoint.down('m')`
-        width: 320px;
+        width: 350px
+    `}
+    ${breakpoint.down('s')`
+        width: 280px
     `}
     ${breakpoint.down('xs')`
-        width: 250px;
+        width: 250px
     `}
 `;
 
@@ -51,7 +50,7 @@ export const ContactPicture = styled.div`
 
 `;
 export const Picture = styled.img`
-    
+
 `;
 
 // export const TitleNavigation = styled.h1`

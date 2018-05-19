@@ -4,7 +4,7 @@ import Form from './Form';
 import GetIssues from './GetIssues';
 import AnimatedWrapper from '../../AnimatedWrapper/AnimatedWrapper';
 
-class ReportIssue extends Component {
+class ReportIssueComponent extends Component {
     state = {
         fields: []
     };
@@ -27,5 +27,5 @@ class ReportIssue extends Component {
         )
     }
 }
-const Report = AnimatedWrapper(ReportIssue);
+const Report = AnimatedWrapper(ReportIssueComponent);
 export default Report
