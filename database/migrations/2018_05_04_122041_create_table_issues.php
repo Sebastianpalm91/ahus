@@ -20,6 +20,7 @@ class CreateTableIssues extends Migration
              $table->string('location');
              $table->string('name');
              $table->string('phone');
+             $table->string('email')->unique();
              $table->string('file');
              $table->timestamps();
          });
