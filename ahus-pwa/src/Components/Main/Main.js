@@ -17,6 +17,8 @@ class Main extends Component {
                 <Route exact path='/nyheter' component={News}/>
                 <Route exact path='/kontakt' component={Contact}/>
                 <Route exact path='/dinfastiget' component={YourRealEstate}/>
+                <Route exact path='/akademiskahus' component={() => window.location = 'https://akademiskahus.se'}/>/>
+                <Route exact path='/admin/login' component={() => window.location = 'http://127.0.0.1:8000/admin/login'}/>/>
             </Switch>
         );
     }

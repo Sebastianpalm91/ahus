@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { IssuesUl, IssueList, Title, Body } from './styles';
+import { IssuesUl, IssueList, IssuedTitle, Body } from './styles';
 
 export default class PersonList extends React.Component {
   state = {
@@ -18,7 +18,7 @@ export default class PersonList extends React.Component {
   render() {
     return (
         <IssuesUl>
-            { this.state.issues.map(issue => <IssueList key={issue.id}> <Title>{issue.title}</Title> <Body>{issue.body}</Body></IssueList>)}
+            { this.state.issues.map(issue => <IssueList key={issue.id}> <IssuedTitle>{issue.title}</IssuedTitle> <Body>{issue.body}</Body></IssueList>)}
         </IssuesUl>
     )
   }
