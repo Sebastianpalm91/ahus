@@ -8,6 +8,7 @@ export const Container = styled.div `
     background-size: cover;
     background: url(${bg});
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 `;

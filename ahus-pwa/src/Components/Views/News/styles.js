@@ -14,14 +14,13 @@ export const Container = styled.div `
     padding-top: 20px;
 `;
 export const Wrapper = styled.div `
-    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: row;
     margin: 0 auto;
     padding: 10px;
-    ${breakpoint.down('l')`
+    ${breakpoint.down('xl')`
         flex-direction: column;
         margin: 0 auto;
         height: unset;

@@ -4,7 +4,7 @@ import Home from '../Views/Home/Home';
 import Report from '../Views/ReportIssue/ReportIssue';
 import News from '../Views/News/News';
 import Contact from '../Views/Contact/Contact';
-import YourRealEstate from '../Views/YourRealEstate/YourRealEstate';
+import Estate from '../Views/YourRealEstate/YourRealEstate';
 import { TransitionGroup } from 'react-transition-group'
 
 
@@ -44,7 +44,7 @@ class Main extends Component {
                 <Route exact path='/dinfastiget' children={({ match, ...rest }) => (
                     <TransitionGroup
                         component={firstChild}>
-                        {match && <YourRealEstate {...rest} />}
+                        {match && <Estate {...rest} />}
                     </TransitionGroup>
                 )}/>
                 <Route exact path='/akademiskahus' component={() => window.location = 'https://akademiskahus.se'}/>/>

@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 // Navigation
 export const Container = styled.header`
-    height: 100vh;
     width: 160px;
     background-color: #E7EDF0;
     ${breakpoint.down('m')`
