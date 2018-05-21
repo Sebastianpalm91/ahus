@@ -34,3 +34,4 @@ Route::put('/user/{id}', 'UserController@put');
 Route::delete('/user/{id}', 'UserController@delete');
 
 Route::get('/location', 'LocationController@get');
+Route::get('/campus', 'LocationController@campus');
