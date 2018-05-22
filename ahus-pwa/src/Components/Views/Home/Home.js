@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Wrapper, ContainerText, Title, TitleSub, WrapperText, Text, } from './styles';
-import AnimatedWrapper from '../../AnimatedWrapper/AnimatedWrapper';
 
-const HomeComponent = () => (
+
+const Home = () => (
   <Container>
       <Wrapper>
           <ContainerText>
@@ -20,5 +20,5 @@ const HomeComponent = () => (
   </Container>
 )
 
-const Home = AnimatedWrapper(HomeComponent);
+
 export default Home;

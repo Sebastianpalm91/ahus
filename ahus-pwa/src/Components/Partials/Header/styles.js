@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 import { Link } from 'react-router-dom'
+import logo from '../../../Assets/Images/Logga192x192.svg'
+
 
 export const HeaderContainer = styled.header`
     display: flex;
@@ -16,8 +18,9 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Text = styled.h1`
-    font-size: 22px;
-    font-weight: 600;
+    font-family: ChronicSemiBold;
+    font-size: 16px;
+    font-weight: 500;
     color: #FFFFFF;
     line-height: 19px;
     margin: 0px;
@@ -47,6 +50,7 @@ export const StyledLink = styled(Link)`
     color: #1c1c1c;
     text-decoration: none;
     transition: all 0.3s ease;
+    border: 0px
     &:hover {
         opacity: 0.5;
     }
@@ -57,7 +61,7 @@ export const CampusContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 96px;
+    height: 80px;
     background-color: #E7EDF0;
 
     ${breakpoint.down('m')`
@@ -71,11 +75,12 @@ export const CampusContainer = styled.div`
         height: 78px;
     `}
 `;
-export const Logo = styled.img`
+
+export const Logo = styled.div`
     display: flex;
     margin: auto;
-    padding: 0px 48px 0px 48px;
-    background-image: url('../Images/logo.svg');
+    margin: 0px 48px 0px 48px;
+    background-image: url(${logo});
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

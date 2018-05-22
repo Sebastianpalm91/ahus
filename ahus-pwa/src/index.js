@@ -5,9 +5,9 @@ import { BrowserRouter } from 'react-router-dom'
 import registerServiceWorker from './registerServiceWorker';
 import Push from 'push.js';
 
-Push.create("Hello world!", {
-    body: "Is it a fire?",
-    icon: '/icon.png',
+Push.create("Hi there", {
+    body: "Welcome to Akademiska Hus",
+    icon: '/android-icon-192x192.png',
     timeout: 4000,
     onClick: function () {
         window.focus();

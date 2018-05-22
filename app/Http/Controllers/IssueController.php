@@ -16,6 +16,7 @@ class IssueController extends Controller
             $issue = Issue::get();
         } else if(Issue::find($id) || abort(500)) $issue = Issue::where('id', $id)->get();
 
+
         return response()->json([
             'issues' => $issue,
             'campus' => $campus
@@ -23,7 +24,7 @@ class IssueController extends Controller
     }
 
     function post(Request $request) {
-        if(!$request->has('title', 'body', 'location', 'name')) return response()->json(['error' => true, 'info' => 'Missing parameters']);
+        if(!$request->has('title', 'body', 'location', 'name', 'phone', 'email')) return response()->json(['error' => true, 'info' => 'Missing parameters']);
 
         $issue = new Issue;
 
@@ -31,6 +32,8 @@ class IssueController extends Controller
         $issue->body = Binput::get('body');
         $issue->location = Binput::get('location');
         $issue->name = Binput::get('name');
+        $issue->phone = Binput::get('phone');
+        $issue->email = Binput::get('email');
 
         $issue->save();
 
