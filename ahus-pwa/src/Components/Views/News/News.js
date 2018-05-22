@@ -1,8 +1,7 @@
 import React from 'react';
 import { Container, Wrapper, Items, ItemFooter, ItemDate } from './styles';
-import AnimatedWrapper from '../../AnimatedWrapper/AnimatedWrapper';
 
-const AboutComponent = () => (
+const About = () => (
   <Container>
       <Wrapper>
           <Items>
@@ -36,5 +35,4 @@ const AboutComponent = () => (
       </Wrapper>
   </Container>
 )
-const About = AnimatedWrapper(AboutComponent);
 export default About;

@@ -1,5 +1,4 @@
 import React from 'react';
-import AnimatedWrapper from '../../AnimatedWrapper/AnimatedWrapper';
 import { Container, Wrapper, Header, Main, HeaderInfo, HeaderViewPicture, MainLeft, MainRight, LeftText, RightText, LeftTitle, LeftTitleSub } from './styles';
 
 const YourRealEstate = () => (
@@ -37,5 +36,4 @@ const YourRealEstate = () => (
   </Container>
 )
 
-const Estate = AnimatedWrapper(YourRealEstate);
-export default Estate;
+export default YourRealEstate;

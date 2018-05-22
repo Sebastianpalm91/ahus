@@ -4,6 +4,7 @@ import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 export const Container = styled.div `
     display: flex;
     justify-content: center;
+    width: 100%;
 `;
 //
 export const Wrapper = styled.div`
