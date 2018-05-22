@@ -17,7 +17,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/issue/{id?}', 'IssueController@get');
+Route::get('/issue', 'IssueController@get');
+Route::get('/issue/{id?}', 'IssueController@get')->where(['id' => '[0-9]+']);
+Route::get('/issue/campus/{campus}', 'IssueController@get');
 Route::post('/issue', 'IssueController@post');
 Route::put('/issue/{id}', 'IssueController@put')->middleware('auth:api');
 Route::delete('/issue/{id}', 'IssueController@delete')->middleware('auth:api');

@@ -8,14 +8,17 @@ use App\Issue;
 
 class IssueController extends Controller
 {
-    function get($id = null) {
-        if($id === null){
+    function get($id = null, $campus = null) {
+        if($campus !== null){
+            
+        }
+        else if($id === null){
             $issue = Issue::get();
         } else if(Issue::find($id) || abort(500)) $issue = Issue::where('id', $id)->get();
-         
 
         return response()->json([
             'issues' => $issue,
+            'campus' => $campus
         ]);
     }
 
