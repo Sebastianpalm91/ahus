@@ -43,10 +43,15 @@ export const InputFields = styled.input`
     font-size: 16px;
     margin-top: 13px;
     padding: 10px 10px;
-    border: 0.5px solid rgba(0, 0, 0, 0.8);
     outline: none;
     :nth-child(1) {
         margin-top: 0px;
+    }
+    ::placeholder {
+        color: #AAAAAA;
+        font-family: SceneLight;
+        font-weight: 500;
+        font-size: 11px;
     }
     ${breakpoint.down('m')`
         height: 50px;
@@ -78,7 +83,7 @@ export const Label = styled.label`
 `;
 export const InputType = styled.input`
     height: 20px;
-    font-size: 6px;
+    color: #AAAAAA;
     margin-top: 13px;
     outline: none;
     :nth-child(1) {
@@ -86,8 +91,10 @@ export const InputType = styled.input`
     }
 `;
 export const InputTitle = styled.h5`
+    font-family: SceneMedium;
     font-size: 11px;
     color: rgba(0,0,0,0.8);
+    font-weight: 500;
     letter-spacing: 0.14px;
     line-height: 20px;
     margin: 27px 0px 0px 0px;
@@ -100,12 +107,13 @@ export const InputTitle = styled.h5`
 export const InputTextArea = styled.textarea`
     width: 400px;
     height: 257px;
-    font-size: 16px;
-    border: 0.5px solid rgba(0, 0, 0, 0.8);
+    font-family: SceneMedium;
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.8);
     margin-top: 13px;
     padding: 10px 10px;
     outline: none;
-
     ${breakpoint.down('m')`
         height: 80px;
         width: inherit;
@@ -118,6 +126,7 @@ export const InputTextArea = styled.textarea`
     `}
 `;
 export const Title = styled.h3`
+    font-family: SceneMedium;
     font-size: 28px;
     font-weight: 500;
     line-height: 30px;
@@ -126,22 +135,25 @@ export const Title = styled.h3`
 `;
 
 export const IssueSubTitle = styled.h3`
+    font-family: ChronicleDeckCond;
     font-size: 16px;
     font-weight: 600;
     line-height: 19px;
     color: rgba(0,0,0,0.8);
     margin: 0px 0px 13px 0px;
     ${breakpoint.down('l')`
-        margin: 20px 0px 13px 0px;
+        margin: 0px 0px 13px 0px;
 
     `}
 `;
-export const IssueTitle = styled.h5`
-    font-size: 11px;
+export const IssueCampus = styled.h5`
+    font-family: SceneLight;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
     color: rgba(0,0,0,0.8);
-    font-weight: 500;
+    margin: 0px 0px 13px 0px;
     letter-spacing: 0.14px;
-    line-height: 20px;
 `;
 export const SubmitButton = styled.button`
     width: 128px;

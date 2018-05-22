@@ -9,21 +9,28 @@ section.route-section {
   left: 0;
 }
 
-.slide-enter {
-    transform: translateX(-100%);
+.fadeIn-enter {
+    transform: translateX(100%);
+    z-index: 1
 }
 
-.slide-enter.slide-enter-active {
+.fadeIn-enter.fadeIn-enter-active {
     transform: translateX(0);
     transition: transform 1000ms cubic-bezier(.4,.01,.13,.99);
+    z-index: 1
+
 }
 
-.slide-exit {
+.fadeIn-exit {
     transform: translateX(100%);
     transition: transform 1000ms cubic-bezier(.4,.01,.13,.99);
+    z-index: 0;
+
 }
 
-.slide-exit.fade-exit-active {
-    transform: translateX(100%);
+.fadeIn-exit.fade-exit-active {
+    transform: translateX(-100%);
     transition: transform 1000ms cubic-bezier(.4,.01,.13,.99);
+    z-index: 0;
+
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { InputFields, SubmitButton, InputContainer, InputTextArea, DescriptionWrapper, InfoContainer, IssueSubTitle, IssueTitle, Title, Wrapper, InputType, InputTitle, Label } from './styles';
+import { InputFields, SubmitButton, InputContainer, InputTextArea, DescriptionWrapper, InfoContainer, IssueCampus, IssueSubTitle, IssueTitle, Title, Wrapper, InputType, InputTitle, Label } from './styles';
 import axios from 'axios';
 
 class Form extends Component {
@@ -9,7 +9,7 @@ class Form extends Component {
         name: '',
         location: '',
         phone: '',
-        file: '',
+        email: ''
     };
     change = e => {
         this.props.onChange({ [e.target.name]: e.target.value});
@@ -26,19 +26,24 @@ class Form extends Component {
             name: "",
             location: "",
             phone: "",
-            file: ""
+            email: ""
         });
 
         const postIssue = {
             title: this.state.title,
             body: this.state.body,
             name: this.state.name,
-            location: this.state.location
+            location: this.state.location,
+            phone: this.state.phone,
+            email: this.state.email,
         };
-
         axios.post(`http://127.0.0.1:8000/api/issue`, postIssue )
-          .then(res => {
+          .then(function (response) {
+            console.log(response);
           })
+          .catch(function (error) {
+            console.log(error);
+          });
     };
     render() {
       return (
@@ -46,7 +51,7 @@ class Form extends Component {
                 <InputContainer onSubmit={this.onSubmit}>
                 <InfoContainer>
                     <Title>Felanmälan</Title>
-                    <IssueSubTitle>CAMPUS CITY</IssueSubTitle>
+                    <IssueCampus>CAMPUS CITY</IssueCampus>
                     <IssueSubTitle>Fyll i formuläret nedan</IssueSubTitle>
                     <InputFields type="text"
                         name="name"
@@ -68,28 +73,18 @@ class Form extends Component {
                     />
                     <InputFields type="text"
                         name="email"
-                        value={this.state.location}
+                        value={this.state.email}
                         placeholder="E-post:"
                         onChange={e => this.change(e)}
                     />
                     <InputFields type="text"
                         name="phone"
-                        value={this.state.location}
+                        value={this.state.phone}
                         placeholder="Telefon"
                         onChange={e => this.change(e)}
                     />
                 </InfoContainer>
                 <DescriptionWrapper>
-                    <InputTitle>Bifoga en video eller bild: </InputTitle>
-                    <Label>Välj Fil
-                        <InputType type="text"
-                            name="file"
-                            type="file"
-                            value={this.state.location}
-                            placeholder="Välj fil"
-                            onChange={e => this.change(e)}
-                        />
-                    </Label>
                     <InputTextArea type="text"
                         name="body"
                         value={this.state.body}
@@ -97,10 +92,21 @@ class Form extends Component {
                         onChange={e => this.change(e)}
                         />
                 </DescriptionWrapper>
-                </InputContainer>
                 <SubmitButton type="submit">Skicka</SubmitButton>
+                </InputContainer>
             </Wrapper>
       );
     }
 }
 export default Form;
+
+// <InputTitle>Bifoga en video eller bild: </InputTitle>
+// <Label>Välj Fil
+//     <InputType type="text"
+//         name="file"
+//         type="file"
+//         value={this.state.file}
+//         placeholder="Välj fil"
+//         onChange={e => this.change(e)}
+//     />
+// </Label>

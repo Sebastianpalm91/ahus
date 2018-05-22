@@ -14,6 +14,7 @@ class ReportIssue extends Component {
             ...updatedValue
         }});
     };
+    // <p>{this.state.fields.title}{this.state.fields.body}{this.state.fields.name}</p>
     render() {
         return (
             <Container>
@@ -21,7 +22,6 @@ class ReportIssue extends Component {
                 <IssueContainer>
                     <GetIssues></GetIssues>
                 </IssueContainer>
-                <p>{this.state.fields.title}{this.state.fields.body}{this.state.fields.name}</p>
             </Container>
         )
     }

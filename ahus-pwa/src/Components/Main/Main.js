@@ -14,7 +14,7 @@ const Main = ({location}) => (
                 <CSSTransition
                     key={location.key}
                     timeout={{ enter: 1000, exit: 1000 }}
-                    classNames="slide"
+                    classNames="fadeIn"
                 >
                     <section className="route-section">
                         <Switch location={location}>
