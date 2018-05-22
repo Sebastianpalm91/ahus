@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Wrapper, Header, Main, HeaderInfo, HeaderViewPicture, MainLeft, MainRight, LeftText, RightText, LeftTitle, LeftTitleSub } from './styles';
+import { Container, Wrapper, Header, Main, HeaderInfo, HeaderViewPicture, MainLeft, MainRight, LeftText, RightText, LeftTitle, LeftTitleSub, ImageContactBuilding, ImageContactInside, ImageContactWrapper, ImageContactText, ImageContactAnchor, ContactFooterWrapper, ContactFooter, ImageContactFooter, ParkingText } from './styles';
 
 const YourRealEstate = () => (
   <Container>
@@ -15,7 +15,7 @@ const YourRealEstate = () => (
                   <LeftTitle>Arkitekturskolan</LeftTitle>
                   <LeftTitleSub>ID: </LeftTitleSub>
                     <LeftText>
-                        Det nya ovala fyravåningshuset, med en total yta på 8 800 kvm, har skapat en länk genom kvarteret vid Osquars backe och bidrar med en stimulerande och kreativ miljö mitt på campusområdet. Eftersom den nya Arkitekturskolan ligger i direkt anslutning till andra verksamheter vid KTH, finns förutsättningar för nya intressanta samarbeten över gränserna.
+                        Det nya ovala fyravåningshuset, med en total yta på 8 800 kvm, har skapat en länk genom kvarteret vid Osquars backe och bidrar med en stimulerande och kreativ miljö mitt på campusområdet. Eftersom den nya Arkitekturskolan ligger i direkt anslutning till andra verksamheter vid KTH, finns förutsättningar för nya intressanta samarbeten över gränserna.<br></br><br></br>
                         Exteriört har byggnaden fått sin karaktär av de svängda fasaderna, uppbyggda av ramar med förskjutna öppningar och glaspartier. Ramverket av rostrött corténstål kan ses som en omtolkning av de äldre husens röda tegelarkitektur som blivit KTH:s signum.
                     </LeftText>
               </MainLeft>
@@ -31,6 +31,38 @@ const YourRealEstate = () => (
                         <strong><br></br>Bruttoarea:</strong> 14300 kvm
                     </RightText>
               </MainRight>
+          </Main>
+          <Main>
+              <ImageContactBuilding />
+                <ImageContactInside />
+                  <ImageContactWrapper>
+                      <ImageContactText>
+                            <strong>Henrik Brännfors</strong><br></br>
+                            Förvaltare<br></br>
+                            08-685 77 24<br></br>
+                            <ImageContactAnchor href="mailto:test@test.com">henrik.brannfors@akademiskahus.se</ImageContactAnchor>
+                            <br></br>
+                            <br></br>
+                            <strong>Anders Ekbergh</strong><br></br>
+                            Drifttekniker<br></br>
+                            08-685 77 14<br></br>
+                            <ImageContactAnchor href="mailto:test@test.com">anders.ekbergh@akademiskahus.se</ImageContactAnchor>
+                      </ImageContactText>
+                  </ImageContactWrapper>
+          </Main>
+          <Main>
+              <ImageContactFooter />
+              <ContactFooterWrapper>
+                  <ParkingText>
+                        <strong>Parkering</strong><br></br>
+                            <br></br>
+                            Pris: 20/tim<br></br>
+                            Elladdning: Ja<br></br>
+                            Antal: 1032 st<br></br>
+                            Öppettider: 24 timmar<br></br>
+                            Karta<br></br>
+                    </ParkingText>
+              </ContactFooterWrapper>
           </Main>
       </Wrapper>
   </Container>

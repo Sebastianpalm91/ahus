@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { InputFields, SubmitButton, InputContainer, InputTextArea, DescriptionWrapper, InfoContainer, IssueCampus, IssueSubTitle, IssueTitle, Title, Wrapper, InputType, InputTitle, Label } from './styles';
+import { InputFields, SubmitButton, InputContainer, InputTextArea, DescriptionWrapper, InfoContainer, IssueCampus, IssueSubTitle, IssueTitle, Title, Wrapper, InputType, InputTitle, Label, IssueDescription } from './styles';
 import axios from 'axios';
 
 class Form extends Component {
@@ -85,28 +85,18 @@ class Form extends Component {
                     />
                 </InfoContainer>
                 <DescriptionWrapper>
+                    <IssueDescription>Fyll i formuläret nedan</IssueDescription>
                     <InputTextArea type="text"
                         name="body"
                         value={this.state.body}
                         placeholder="Beskrivning"
                         onChange={e => this.change(e)}
                         />
+                    <SubmitButton type="submit">Felanmäl</SubmitButton>
                 </DescriptionWrapper>
-                <SubmitButton type="submit">Skicka</SubmitButton>
                 </InputContainer>
             </Wrapper>
       );
     }
 }
 export default Form;
-
-// <InputTitle>Bifoga en video eller bild: </InputTitle>
-// <Label>Välj Fil
-//     <InputType type="text"
-//         name="file"
-//         type="file"
-//         value={this.state.file}
-//         placeholder="Välj fil"
-//         onChange={e => this.change(e)}
-//     />
-// </Label>
