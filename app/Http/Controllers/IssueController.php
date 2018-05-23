@@ -5,22 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use GrahamCampbell\Binput\Facades\Binput;
 use App\Issue;
+use App\Campus;
 
 class IssueController extends Controller
 {
-    function get($id = null, $campus = null) {
-        if($campus !== null){
-            
-        }
-        else if($id === null){
+    function get($id = null) {
+        if($id === null){
             $issue = Issue::get();
         } else if(Issue::find($id) || abort(500)) $issue = Issue::where('id', $id)->get();
 
 
         return response()->json([
-            'issues' => $issue,
-            'campus' => $campus,
-            'id' => $id
+            'issues' => $issue
+        ]);
+    }
+
+    function byCampus($id){
+        if(Campus::find($id) || abort(500)) $issue = Campus::find($id)->issues()->get();
+
+
+        return response()->json([
+            'issues' => $issue
         ]);
     }
 
