@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 import { Link } from 'react-router-dom'
 import logo from '../../../Assets/Images/Logga192x192.svg'
+import SimpleLineIcon from 'react-simple-line-icons';
+
 
 
 export const HeaderContainer = styled.header`
@@ -30,6 +32,40 @@ export const Text = styled.h1`
             display: none;
         }
     `}
+`;
+
+export const SelectWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    ${breakpoint.down('m')`
+        display: none;
+    `}
+`;
+
+
+export const Select = styled.select`
+    width: 320px;
+    font-family: SceneMedium;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: right;
+    color: rgba(0,0,0,0.8);
+    border: none;
+    background-color: unset;
+    margin: 0px 0px 0px 35px;
+    appearance: none;
+    background-image: url(${logo});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 296px;
+`;
+
+export const Option = styled.option`
+
 `;
 
 export const StyledLinkAdmin = styled(Link)`

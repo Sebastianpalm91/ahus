@@ -68,7 +68,9 @@ class Form extends Component {
                     <InputFields type="text"
                         name="location"
                         value={this.state.location}
-                        placeholder="Plats"
+                        placeholder="Plats,  t.ex. Hus: A
+                        Vån: 3
+                        Rum: 340"
                         onChange={e => this.change(e)}
                     />
                     <InputFields type="text"

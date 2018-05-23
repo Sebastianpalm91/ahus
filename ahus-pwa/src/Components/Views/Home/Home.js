@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Wrapper, ContainerText, Title, TitleSub, WrapperText, Text, } from './styles';
-
+import LocationHandler from '../../GoogleApiComponent/LocationHandler';
 
 const Home = () => (
   <Container>
@@ -15,6 +15,7 @@ const Home = () => (
                       Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </Text>
               </WrapperText>
+              <LocationHandler></LocationHandler>
           </ContainerText>
       </Wrapper>
   </Container>
