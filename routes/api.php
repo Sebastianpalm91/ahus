@@ -18,8 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/issue', 'IssueController@get');
+
 Route::get('/issue/{id?}', 'IssueController@get')->where(['id' => '[0-9]+']);
-Route::get('/issue/campus/{campus}', 'IssueController@get');
+Route::get('/issue/campus/{id?}', 'IssueController@byCampus');
+
 Route::post('/issue', 'IssueController@post');
 Route::put('/issue/{id}', 'IssueController@put')->middleware('auth:api');
 Route::delete('/issue/{id}', 'IssueController@delete')->middleware('auth:api');

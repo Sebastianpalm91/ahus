@@ -11,16 +11,18 @@ class CreateTableIssues extends Migration
      *
      * @return void
      */
-     public function up()
+    public function up()
      {
          Schema::create('issues', function (Blueprint $table) {
              $table->increments('id');
              $table->string('title');
              $table->text('body');
+             $table->unsignedInteger('campus_id');
+             $table->foreign('campus_id')->references('id')->on('campus');
              $table->string('location');
              $table->string('name');
              $table->string('phone');
-             $table->string('email')->unique();
+             $table->string('email');
              $table->timestamps();
          });
      }
