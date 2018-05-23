@@ -19,7 +19,8 @@ class IssueController extends Controller
 
         return response()->json([
             'issues' => $issue,
-            'campus' => $campus
+            'campus' => $campus,
+            'id' => $id
         ]);
     }
 

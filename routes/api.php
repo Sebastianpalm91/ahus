@@ -26,14 +26,14 @@ Route::delete('/issue/{id}', 'IssueController@delete')->middleware('auth:api');
 
 Route::get('/news/{id?}', 'NewsController@get');
 Route::post('/news', 'NewsController@post');
-Route::put('/news/{id}', 'NewsController@put');
-Route::delete('/news/{id}', 'NewsController@delete');
+Route::put('/news/{id}', 'NewsController@put')->middleware('auth:api');
+Route::delete('/news/{id}', 'NewsController@delete')->middleware('auth:api');
 
 Route::get('/user/{id?}', 'UserController@get');
 Route::get('/token', 'UserController@token');
 Route::post('/user', 'UserController@post');
-Route::put('/user/{id}', 'UserController@put');
-Route::delete('/user/{id}', 'UserController@delete');
+Route::put('/user/{id}', 'UserController@put')->middleware('auth:api');
+Route::delete('/user/{id}', 'UserController@delete')->middleware('auth:api');
 
 Route::get('/location', 'LocationController@get');
 Route::get('/campus', 'LocationController@campus');
