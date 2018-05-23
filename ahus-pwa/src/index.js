@@ -7,7 +7,7 @@ import Push from 'push.js';
 
 Push.create("Hi there", {
     body: "Welcome to Akademiska Hus",
-    icon: '/android-icon-192x192.png',
+    icon: '/Logga192x192.png',
     timeout: 4000,
     onClick: function () {
         window.focus();
