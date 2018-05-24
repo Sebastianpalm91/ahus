@@ -33,7 +33,7 @@ class Contact extends Component {
             <ItemContainer>
                 {this.state.users.map(user =>
                     <Items key={user.id}>
-                        <ContactPicture>
+                        <ContactPicture src={user.avatar}>
                         </ContactPicture>
                         <ContactInfo>
                             <ContactTitle>Förvaltare</ContactTitle>

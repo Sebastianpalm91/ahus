@@ -7,31 +7,31 @@ export const Container = styled.div `
     flex-direction: column;
     background-color: #FFFFFF;
     width: 100%;
-`
+`;
+
 export const Wrapper = styled.div `
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
     margin-top: 60px;
     margin-bottom: 60px;
-`
+`;
 
 export const HeaderWrapper = styled.header`
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     margin-bottom: 100px;
-    display: inline;
     width: 565px;
+    margin-left: 80px;
     ${breakpoint.down('xl')`
         margin: 15px;
         margin: auto;
         justify-content: center;
     `}
     ${breakpoint.down('m')`
-    margin: 15px;
-    width: unset;
+        margin: 15px;
+        width: unset;
         justify-content: center;
     `}
 `;
@@ -104,11 +104,7 @@ export const ContactText = styled.p`
     padding: 3px 0px 0px 0px;
     margin: 0px;
 `;
-export const ContactPicture = styled.div`
+export const ContactPicture = styled.img`
     height: 92px;
     width: 90px;
-    background-image: url(${bg});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 `;

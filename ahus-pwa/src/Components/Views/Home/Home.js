@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Wrapper, ContainerText, Title, TitleSub, WrapperText, Text, } from './styles';
-import GoogleMap from '../../GoogleApiComponent/GoogleMap';
+import MapContainer from '../../GoogleApiComponent/MapContainer';
 
 const Home = () => (
   <Container>
@@ -15,7 +15,13 @@ const Home = () => (
                       Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </Text>
               </WrapperText>
-
+              <MapContainer
+                  isMarkerShown
+                  googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb30G0GTm-T_S-l48ZJpaXxwKs9tvIZO4"
+                  loadingElement={<div style={{ height: `100%`, width: '100%' }} />}
+                  containerElement={<div style={{ width: `100%`, height: `100%` }} />}
+                  mapElement={<div style={{ height: `100%` }} />}
+                  />
           </ContainerText>
       </Wrapper>
   </Container>
