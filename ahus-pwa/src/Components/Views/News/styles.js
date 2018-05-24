@@ -17,7 +17,7 @@ export const Wrapper = styled.div `
     height: 100%;
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 auto;
     padding: 10px;
     ${breakpoint.down('xl')`
@@ -69,6 +69,7 @@ export const DateText = styled.p`
     line-height: 23px;
     color: #FFFFFF;
     margin: 0px;
+    padding-left: 13px;
     padding-top: 3px;
 `;
 export const ItemFooter = styled.div `

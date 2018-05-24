@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Container, ItemContainer, Items, ContactInfo, ContactPicture, ContactText, Picture } from './styles';
+import { Container, Wrapper, ItemContainer, Items, ContactInfo, ContactPicture, ContactText, Picture, ContactTitle, HeaderWrapper, HeaderText, Header } from './styles';
 
 class Contact extends Component {
   state = {
@@ -19,21 +19,33 @@ class Contact extends Component {
   render() {
     return (
         <Container>
-            {this.state.users.map(user =>
-                <ItemContainer key={user.id}>
-                    <Items>
+            <Wrapper>
+            <HeaderWrapper>
+                <Header>
+                    Vi på Akademiska Hus
+                </Header>
+                <HeaderText>
+                    Vi på Akademiska Hus är en stor blandning av människor med olika bakgrunder.
+                    Vårt fokus ligger på kund och vi jobbar hårt med att göra er nöjda.
+                    Nedan visas de kontakter som är specifika för just ditt campus.
+                </HeaderText>
+            </HeaderWrapper>
+            <ItemContainer>
+                {this.state.users.map(user =>
+                    <Items key={user.id}>
+                        <ContactPicture>
+                        </ContactPicture>
                         <ContactInfo>
+                            <ContactTitle>Förvaltare</ContactTitle>
                             <ContactText>{ user.name }</ContactText>
                             <ContactText>{ user.role }</ContactText>
-                            <ContactText>{ user.email }</ContactText>
+                            <ContactTitle>{ user.email }</ContactTitle>
                             <ContactText>{ user.phone }</ContactText>
-                            <ContactPicture>
-                                { user.avatar }
-                            </ContactPicture>
                         </ContactInfo>
                     </Items>
-                </ItemContainer>
-            )}
+                )}
+            </ItemContainer>
+            </Wrapper>
         </Container>
     )
   }

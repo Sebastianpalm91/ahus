@@ -1,14 +1,16 @@
 import React from 'react';
-import { Li, StyledLink, Logo, MenuWrapper } from './styles';
+import { Li, StyledLink, Logo, MenuWrapper, Ul } from './styles';
 import { stack as Menu } from 'react-burger-menu'
 const Hamburger = () => (
     <MenuWrapper>
         <Menu isOpen={ false } styles={ styles } right>
-            <Li><StyledLink className="menu-item" to='/'>Hem</StyledLink></Li>
-            <Li><StyledLink className="menu-item" to='/felanmalan'>Felanmälan</StyledLink></Li>
-            <Li><StyledLink className="menu-item" to='/nyheter'>Nyheter</StyledLink></Li>
-            <Li><StyledLink className="menu-item" to='/kontakt'>Kontakt</StyledLink></Li>
-            <Li><StyledLink className="menu-item" to='/dinfastiget'>Din Fastighet</StyledLink></Li>
+            <Ul>
+                <Li><StyledLink className="menu-item" to='/' alt="Hem">Hem</StyledLink></Li>
+                <Li><StyledLink className="menu-item" to='/felanmalan'>Felanmälan</StyledLink></Li>
+                <Li><StyledLink className="menu-item" to='/nyheter'>Nyheter</StyledLink></Li>
+                <Li><StyledLink className="menu-item" to='/kontakt'>Kontakt</StyledLink></Li>
+                <Li><StyledLink className="menu-item" to='/dinfastiget'>Din Fastighet</StyledLink></Li>
+            </Ul>
         </Menu>
     </MenuWrapper>
 )

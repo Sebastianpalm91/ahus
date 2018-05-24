@@ -22,7 +22,7 @@ class HeaderCampus extends Component {
     render() {
     return(
             <CampusContainer>
-                <StyledLink to='/'><Logo></Logo></StyledLink>
+                <StyledLink to='/' alt="Logo-Hem" name="Logo"><Logo></Logo></StyledLink>
                 <SelectWrapper>
                 <Select>
                 {this.state.campuses.map(campus =>

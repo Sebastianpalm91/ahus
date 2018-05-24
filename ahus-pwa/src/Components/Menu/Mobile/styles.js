@@ -7,6 +7,12 @@ export const Li = styled.li`
     list-style: none;
     justify-content: center;
 `;
+export const Ul = styled.ul`
+    padding: 0px;
+    margin: 0px;
+    margin-top: 50px;
+    list-style: none;
+`;
 
 export const StyledLink = styled(Link)`
     font-size: 1em;
