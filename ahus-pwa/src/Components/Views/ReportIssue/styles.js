@@ -174,6 +174,7 @@ export const SubmitButton = styled.button`
     background-color: #6EC81E;
     color: #FFFFFF;
     margin-top: 50px;
+    cursor: pointer;
     ${breakpoint.down('l')`
         margin-top: 10px;
     `}

@@ -49,22 +49,71 @@ export const Items = styled.div `
     `}
 
 `;
+export const ItemDate = styled.div `
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-color: #283C4E;
+`;
+export const DateText = styled.p`
+    height: 23px;
+    font-family: SceneLight;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.14px;
+    line-height: 23px;
+    color: #FFFFFF;
+    margin: 0px;
+    padding-top: 3px;
+`;
 export const ItemFooter = styled.div `
     width: 100%;
     height: 70px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: absolute;
     bottom: 0;
     left: 0;
     background: white;
 `;
 
-export const ItemDate = styled.div `
-    width: 90px;
-    height: 30px;
+export const TextWrapper = styled.div`
     display: flex;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    background: white;
+    flex-direction: column;
+    padding: 0px 0px 0px 15px;
+`;
+
+export const NewsTitle = styled.h3`
+    font-family: SceneMedium;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 23px;
+    color: rgba(0,0,0,0.8);
+    margin: 0px;
+`;
+
+export const NewsAuthor = styled.p`
+    font-family: SceneLight;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.15px;
+    line-height: 23px;
+    color: rgba(0,0,0,0.8);
+    margin: 0px;
+`;
+export const ContextImage = styled.div`
+    height: 30px;
+    width: 30px;
+    background-image: url(${bg});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 16px;
 `;

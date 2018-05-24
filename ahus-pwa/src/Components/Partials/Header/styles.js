@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 import { Link } from 'react-router-dom'
 import logo from '../../../Assets/Images/Logga192x192.svg'
+import arrow from '../../../Assets/Images/Arrow-down.svg'
 import SimpleLineIcon from 'react-simple-line-icons';
 
 
@@ -46,7 +47,7 @@ export const SelectWrapper = styled.div`
 
 
 export const Select = styled.select`
-    width: 320px;
+    width: 330px;
     font-family: SceneMedium;
     font-size: 22px;
     font-weight: 500;
@@ -55,13 +56,15 @@ export const Select = styled.select`
     color: rgba(0,0,0,0.8);
     border: none;
     background-color: unset;
+    outline: none;
     margin: 0px 0px 0px 35px;
     appearance: none;
-    background-image: url(${logo});
+    background-image: url(${arrow});
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position-x: 296px;
+    background-position-x: 286px;
+    cursor: pointer;
 `;
 
 export const Option = styled.option`
