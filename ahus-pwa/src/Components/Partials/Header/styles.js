@@ -62,8 +62,8 @@ export const Select = styled.select`
     background-image: url(${arrow});
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: 286px;
+    background-size: 16px;
+    background-position-x: 310px;
     cursor: pointer;
 `;
 
