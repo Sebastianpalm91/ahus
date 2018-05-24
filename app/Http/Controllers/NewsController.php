@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\NewsFeed;
+use App\User;
 
 class NewsController extends Controller
 {
@@ -12,6 +13,9 @@ class NewsController extends Controller
             $news = NewsFeed::get();
         } else if(NewsFeed::find($id) || abort(500)) $news = NewsFeed::where('id', $id)->get();
          
+        foreach ($news as $article => $value) {
+            $news[$article]['author'] = User::find($value['author_id'])->only(['name', 'email', 'id']);
+        }
 
         return response()->json([
             'news' => $news,
