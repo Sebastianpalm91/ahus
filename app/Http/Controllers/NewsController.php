@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use GrahamCampbell\Binput\Facades\Binput;
 use App\NewsFeed;
 use App\User;
 
@@ -40,7 +41,28 @@ class NewsController extends Controller
     }
 
     function put($id){
+        $r = request();
 
+        $changes = [];
+
+        if($news = News::find($id)){
+
+            foreach(Binput::except('_token') as $key => $value){
+                if($news[$key] !== $value && $news->update([$key => $value])){
+                    array_push($changes, $key);
+                }
+            }
+
+            return response()->json([
+                "status" => "200",
+                "changed" => $changes,
+            ]);
+        } else {
+            return response()->json([
+                'status' => '500',
+                'message' => 'News of given ID could not be found'
+            ]);
+        }
     }
 
     function delete($id){
