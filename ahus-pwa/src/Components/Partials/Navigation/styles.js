@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom'
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 // Navigation
 export const Container = styled.header`
+display: flex;
+flex-direction: column;
+
     width: 180px;
     background-color: #E7EDF0;
     ${breakpoint.down('m')`
@@ -41,4 +44,20 @@ export const Ul = styled.ul`
     margin: 0px;
     padding: 0px;
     background-color: #ffffff;
+
+`;
+
+export const SocialWrapper = styled.div`
+    display: flex;
+    :nth-child(2) {
+        height: 100%;
+    }
+`;
+
+export const SocialIcons = styled.img`
+    display: flex;
+    margin: auto;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 30px;
 `;

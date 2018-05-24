@@ -1,5 +1,8 @@
 import React from 'react';
-import { Container, Ul, Li, NavItems, Logo } from './styles';
+import { Container, Ul, Li, NavItems, Logo, SocialIcons, SocialWrapper } from './styles';
+import Twitter from '../../../Assets/Images/Twitter.svg'
+import GooglePlus from '../../../Assets/Images/Google-plus.svg'
+import Facebook from '../../../Assets/Images/Facebook.svg'
 
 const Navigation = () => (
 
@@ -11,6 +14,11 @@ const Navigation = () => (
                 <NavItems activeClassName="active" to='/dinfastiget'>DIN FASTIGHET</NavItems>
                 <NavItems activeClassName="active" to='/akademiskahus'>Akademiskahus.se</NavItems>
             </Ul>
+            <SocialWrapper>
+                <SocialIcons src={Twitter}></SocialIcons>
+                <SocialIcons src={GooglePlus}></SocialIcons>
+                <SocialIcons src={Facebook}></SocialIcons>
+            </SocialWrapper>
     </Container>
 
 )
