@@ -3,9 +3,6 @@ import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 import { Link } from 'react-router-dom'
 import logo from '../../../Assets/Images/Logga192x192.svg'
 import arrow from '../../../Assets/Images/Arrow-down.svg'
-import SimpleLineIcon from 'react-simple-line-icons';
-
-
 
 export const HeaderContainer = styled.header`
     display: flex;

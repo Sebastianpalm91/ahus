@@ -6,7 +6,6 @@ import HeaderCampus from './Components/Partials//Header/HeaderCampus'; // Campus
 import Navigation from './Components/Partials/Navigation/Navigation';
 import Main from './Components/Main/Main'; // Routing
 import Hamburger from './Components/Menu/Mobile/Hamburger'; // Mobile Menu
-import styled from "styled-components";
 import { MainContainer } from './Assets/Styles/Src/App.js';
 
 class App extends Component {

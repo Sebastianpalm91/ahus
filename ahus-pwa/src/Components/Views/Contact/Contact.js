@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Container, Wrapper, ItemContainer, Items, ContactInfo, ContactPicture, ContactText, Picture, ContactTitle, HeaderWrapper, HeaderText, Header } from './styles';
+import { Container, Wrapper, ItemContainer, Items, ContactInfo, ContactPicture, ContactText, ContactTitle, HeaderWrapper, HeaderText, Header } from './styles';
 
 class Contact extends Component {
   state = {

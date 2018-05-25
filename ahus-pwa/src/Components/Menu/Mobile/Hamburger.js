@@ -4,6 +4,7 @@ import { stack as Menu } from 'react-burger-menu'
 const Hamburger = () => (
     <MenuWrapper>
         <Menu isOpen={ false } styles={ styles } right>
+            <Logo></Logo>
             <Ul>
                 <Li><StyledLink className="menu-item" to='/' alt="Hem">Hem</StyledLink></Li>
                 <Li><StyledLink className="menu-item" to='/felanmalan'>Felanmälan</StyledLink></Li>
@@ -26,8 +27,8 @@ var styles = {
     background: '#ffffff'
   },
   bmCrossButton: {
-    height: '24px',
-    width: '24px'
+    height: '44px',
+    width: '44px'
   },
   bmCross: {
     background: '#bdc3c7'

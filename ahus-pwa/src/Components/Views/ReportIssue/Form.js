@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { InputFields, SubmitButton, InputContainer, InputTextArea, DescriptionWrapper, InfoContainer, IssueCampus, IssueSubTitle, IssueTitle, Title, Wrapper, InputType, InputTitle, Label, IssueDescription } from './styles';
+import { InputFields, SubmitButton, InputContainer, InputTextArea, DescriptionWrapper, InfoContainer, IssueCampus, IssueSubTitle, Title, Wrapper, IssueDescription } from './styles';
 import axios from 'axios';
 
 class Form extends Component {

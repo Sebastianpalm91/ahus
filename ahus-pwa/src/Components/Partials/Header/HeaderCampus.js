@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-import { CampusContainer, Select, Option, StyledLink, Logo, SelectWrapper, Arrow } from './styles';
+import { CampusContainer, Select, Option, StyledLink, Logo, SelectWrapper } from './styles';
 import axios from 'axios';
-import SimpleLineIcon from 'react-simple-line-icons';
-
 
 // The Header creates links that can be used to navigate
 // between routes.

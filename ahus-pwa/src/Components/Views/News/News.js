@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Wrapper, Items, ItemFooter, ItemDate, NewsTitle, NewsAuthor, TextWrapper, DateText, ContextImage, ImageHeader } from './styles';
 import axios from 'axios';
-import {IntlProvider, FormattedMessage, FormattedDate} from 'react-intl';
+import { FormattedDate } from 'react-intl';
 export default class News extends React.Component {
   state = {
     newsfeed: []

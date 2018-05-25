@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Ul, Li, NavItems, Logo, SocialIcons, SocialWrapper } from './styles';
+import { Container, Ul, NavItems, SocialIcons, SocialWrapper } from './styles';
 import Twitter from '../../../Assets/Images/Twitter.svg'
 import GooglePlus from '../../../Assets/Images/Google-plus.svg'
 import Facebook from '../../../Assets/Images/Facebook.svg'

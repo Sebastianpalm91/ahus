@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from 'react-router-dom'
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
+import logo from '../../../Assets/Images/Logga192x192.svg'
 
 export const Li = styled.li`
     padding: 20px;
@@ -10,7 +11,7 @@ export const Li = styled.li`
 export const Ul = styled.ul`
     padding: 0px;
     margin: 0px;
-    margin-top: 50px;
+    margin-top: 10px;
     list-style: none;
 `;
 
@@ -22,16 +23,17 @@ export const StyledLink = styled(Link)`
         color: black;
     }
 `;
-export const Logo = styled.img`
+export const Logo = styled.div`
     display: flex;
     margin: auto;
     padding: 23px 0px 23px 0px;
-    background-image: url('../Images/logo.svg');
+    background-image: url(${logo});
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     height: 50px;
     width: 64px;
+    margin-top: 30px;
 `;
 
 export const MenuWrapper = styled.div`

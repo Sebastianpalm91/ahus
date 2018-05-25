@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import Styles from './styles.css';
+import './styles.css';
 
 import Home from '../Views/Home/Home';
 import ReportIssue from '../Views/ReportIssue/ReportIssue';

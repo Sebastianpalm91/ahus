@@ -6,26 +6,25 @@ import {
   GoogleMap,
   Marker,
 } from "react-google-maps";
-import { InfoBoxCustom, Pointy, InfoBoxWrapper } from './styles';
 import InfoBoxInner from './InfoBoxInner';
 import axios from 'axios';
 
 
 const { InfoBox } = require("react-google-maps/lib/components/addons/InfoBox");
-const markers = {
-      1: {
-        lat: 57.689470,
-        lng: 11.978107
-      },
-      2: {
-        lat: 57.688833,
-        lng: 11.979287
-      },
-      3: {
-        lat: 57.689085,
-        lng: 11.976540
-      },
-}
+// const markers = {
+//       1: {
+//         lat: 57.689470,
+//         lng: 11.978107
+//       },
+//       2: {
+//         lat: 57.688833,
+//         lng: 11.979287
+//       },
+//       3: {
+//         lat: 57.689085,
+//         lng: 11.976540
+//       },
+// }
 
 class MapContainer extends Component {
     constructor(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Wrapper, Header, Main, HeaderInfo, HeaderViewPicture, MainLeft, MainRight, LeftText, RightText, LeftTitle, LeftTitleSub, ImageContactBuilding, ImageContactInside, ImageContactWrapper, ImageContactText, ImageContactAnchor, ContactFooterWrapper, ContactFooter, ImageContactFooter, ParkingText } from './styles';
+import { Container, Wrapper, Header, Main, HeaderInfo, HeaderViewPicture, MainLeft, MainRight, LeftText, RightText, LeftTitle, LeftTitleSub, ImageContactBuilding, ImageContactInside, ImageContactWrapper, ImageContactText, ImageContactAnchor, ContactFooterWrapper, ImageContactFooter, ParkingText } from './styles';
 
 
 const YourRealEstate = () => (

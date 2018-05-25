@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 import banner from '../../../Assets/Images/newsscreen.png'
-import building from '../../../Assets/Images/newsscreen.png'
-import buildinginside from '../../../Assets/Images/newsscreen.png'
 
 export const Container = styled.div `
     display: flex;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Container, IssueContainer, TitleCity } from './styles';
+import { Container, IssueContainer } from './styles';
 import Form from './Form';
 import GetIssues from './GetIssues';
 

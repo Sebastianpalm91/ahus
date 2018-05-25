@@ -16,9 +16,9 @@ Push.create("Hi there", {
     }
 });
 ReactDOM.render(
-    <BrowserRouter>
-        <IntlProvider locale="en">
-            <App />
-        </IntlProvider>
-    </BrowserRouter>, document.getElementById('root'));
+    <IntlProvider locale="en">
+        <BrowserRouter>
+                <App />
+        </BrowserRouter>
+    </IntlProvider>, document.getElementById('root'));
 registerServiceWorker();
