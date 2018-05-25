@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Campus;
+use App\Location;
 
 class Issue extends Model
 {
@@ -12,5 +13,9 @@ class Issue extends Model
 
     function campus() {
         return $this->belongsTo('App\Campus');
+    }
+
+    function location(){
+        return $this->belongsTo('App\Location');
     }
 }
