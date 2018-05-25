@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from "styled-components";
 import { breakpoint } from '../../Assets/Scripts/theme/mixins';
 
@@ -5,4 +6,8 @@ import { breakpoint } from '../../Assets/Scripts/theme/mixins';
 export const Container = styled.div`
     height: 100px;
     width: 100px;
+`;
+
+export const InfoBoxWrapper = styled.div`
+    
 `;

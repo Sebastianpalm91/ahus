@@ -41,6 +41,13 @@ export const Wrapper = styled.div`
         padding: 10px;
     `}
 `;
+export const MapWrapper = styled.div`
+    display: flex;
+    margin-top: 100px;
+    width: inherit;
+    height: 100%;
+
+`;
 
 export const ContainerText = styled.div`
     display: inline-block;
