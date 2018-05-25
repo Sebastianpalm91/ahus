@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container, Wrapper, ContainerText, Title, TitleSub, WrapperText, Text, MapWrapper } from './styles';
+import { Container, Wrapper, ContainerText, Title, TitleSub, WrapperText, Text, MapWrapper, Row } from './styles';
 import MapContainer from '../../GoogleApiComponent/MapContainer';
 
 const Home = () => (
   <Container>
+      <Row>
       <Wrapper>
           <ContainerText>
               <Title>Välkommen!</Title>
@@ -26,8 +27,11 @@ const Home = () => (
               mapElement={<div style={{ height: `100%` }} />}
             />
         </MapWrapper>
+        </Row>
   </Container>
 )
+
+
 
 
 export default Home;

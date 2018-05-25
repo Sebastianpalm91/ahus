@@ -13,27 +13,10 @@ export const Container = styled.div `
     background-size: cover;
 `;
 
-// export const TextContainer = styled.div`
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     width: 100%;
-//     height: 96px;
-//     background-color: #E7EDF0;
-//     ${breakpoint.down('m')`
-//         height: 78px;
-//     `}
-//     ${breakpoint.down('s')`
-//         height: 78px;
-//     `}
-//     ${breakpoint.down('xs')`
-//         height: 78px;
-//     `}
-// `;
-
 export const Wrapper = styled.div`
     display: flex;
     padding: 50px;
+    width: 100%;
     ${breakpoint.down('s')`
         padding: 20px;
     `}
@@ -41,12 +24,16 @@ export const Wrapper = styled.div`
         padding: 10px;
     `}
 `;
+export const Row = styled.div`
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+`;
 export const MapWrapper = styled.div`
     display: flex;
-    margin-top: 100px;
-    width: inherit;
-    height: 100%;
-
+    width: 100%;
+    padding: 40px;
 `;
 
 export const ContainerText = styled.div`

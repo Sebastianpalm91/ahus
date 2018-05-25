@@ -35,22 +35,35 @@ class MapContainer extends Component {
         ...props
       }
     }
+    state = {
+      issues: []
+    }
+
+    componentDidMount() {
+      axios.get(`http://127.0.0.1:8000/api/issue`)
+        .then(res => {
+          const issues = res.data.issues;
+          this.setState({ issues });
+          console.log(issues);
+        })
+    }
     render() {
         return (
             <GoogleMap
                     defaultZoom={16}
                     defaultCenter={{ lat: 57.688836, lng: 11.977970 }}
+                    style={{margineft: '20px'}}
                 >
                 <Marker
                   position={{ lat: 57.707756, lng: 11.978284 }}
                   onClick={this.props.onToggleOpen}
                 />
                 {
-                    this.state.issues && this.state.issues.map((issue, i) => (
+                    this.state.issues && this.state.issues.map((issue) => (
                         <Marker
                             animation={google.maps.Animation.DROP}
-                            key={i}
-                            position={{ lat: 57.688836, lng: 11.977970 }}>
+                            key={issue.id}
+                            position={{ lat: Number.parseFloat(issue.latitude), lng: Number.parseFloat(issue.longitude) }}>
                             <InfoBox
                                 style={{padding: `0px`}}
                                 options={{ closeBoxURL: ``, enableEventPropagation: true, alignBottom: true, pixelOffset: new google.maps.Size(-5, -25)}}

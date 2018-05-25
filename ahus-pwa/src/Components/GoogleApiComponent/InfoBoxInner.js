@@ -27,9 +27,9 @@ const CustomInfoBox = styled.div`
 export const InfoBoxInner = (props) => (
     <React.Fragment>
         <CustomInfoBox className="infobox__custom">
-            <span style={{fontFamily: 'Chronicle', fontSize: '16px', marginBottom: '.5rem'}}>{props.title}</span>
-            <span style={{fontFamily: 'OpensansReg', fontSize: '12px', marginBottom: '.5rem'}}>{props.body}</span>
-            <span style={{fontFamily: 'OpensansBold', fontSize: '12px'}}>{props.location}</span>
+            <span style={{fontFamily: 'ChronicleMedium', fontSize: '14px', marginBottom: '.5rem'}}>{props.title}</span>
+            <span style={{fontFamily: 'SceneLight', fontSize: '12px', marginBottom: '.5rem'}}>{props.body}</span>
+            <span style={{fontFamily: 'SceneLight', fontSize: '12px'}}>{props.location}</span>
         </CustomInfoBox>
         <Pointy />
     </React.Fragment>
