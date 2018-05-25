@@ -13,7 +13,7 @@ class AddLonLatToIssues extends Migration
      */
     public function up()
     {
-        Schema::table('issue', function(Blueprint $table){
+        Schema::table('issues', function(Blueprint $table){
             $table->string('latitude')->after('location');
             $table->string('longitude')->after('location');
         });
@@ -26,7 +26,7 @@ class AddLonLatToIssues extends Migration
      */
     public function down()
     {
-        Schema::table('issue', function(Blueprint $table){
+        Schema::table('issues', function(Blueprint $table){
             $table->dropColumn('latitude');
             $table->dropColumn('longitude');
         });
