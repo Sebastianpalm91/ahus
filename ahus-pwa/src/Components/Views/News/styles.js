@@ -29,10 +29,6 @@ export const Wrapper = styled.div `
 `;
 
 export const Items = styled.div `
-    background-image: url(${bg});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 480px;
     height: 240px;
     display: flex;
@@ -48,6 +44,21 @@ export const Items = styled.div `
         width: 280px;
     `}
 
+`;
+export const ImageHeader = styled.img `
+    width: 480px;
+    height: 240px;
+    display: flex;
+    position: relative;
+    ${breakpoint.down('l')`
+        width: 450px;
+    `}
+    ${breakpoint.down('s')`
+        width: 320px;
+    `}
+    ${breakpoint.down('xs')`
+        width: 280px;
+    `}
 `;
 export const ItemDate = styled.div `
     width: 90px;
@@ -69,7 +80,6 @@ export const DateText = styled.p`
     line-height: 23px;
     color: #FFFFFF;
     margin: 0px;
-    padding-left: 13px;
     padding-top: 3px;
 `;
 export const ItemFooter = styled.div `
@@ -109,12 +119,8 @@ export const NewsAuthor = styled.p`
     color: rgba(0,0,0,0.8);
     margin: 0px;
 `;
-export const ContextImage = styled.div`
+export const ContextImage = styled.img`
     height: 30px;
     width: 30px;
-    background-image: url(${bg});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     margin-right: 16px;
 `;

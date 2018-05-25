@@ -4,6 +4,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom'
 import registerServiceWorker from './registerServiceWorker';
 import Push from 'push.js';
+import {IntlProvider} from 'react-intl';
 
 Push.create("Hi there", {
     body: "Welcome to Akademiska Hus",
@@ -16,6 +17,8 @@ Push.create("Hi there", {
 });
 ReactDOM.render(
     <BrowserRouter>
-        <App />
+        <IntlProvider locale="en">
+            <App />
+        </IntlProvider>
     </BrowserRouter>, document.getElementById('root'));
 registerServiceWorker();

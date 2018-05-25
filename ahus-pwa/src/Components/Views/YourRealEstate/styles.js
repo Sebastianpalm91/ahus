@@ -12,22 +12,21 @@ export const Container = styled.div `
 //
 export const Wrapper = styled.div`
     width: 960px;
-    background: black;
     margin: 50px;
     ${breakpoint.down('xl')`
         width: 850px;
     `}
     ${breakpoint.down('l')`
-        width: 600px;
+        width: 700px;
     `}
     ${breakpoint.down('m')`
         width: 500px;
     `}
     ${breakpoint.down('s')`
-        width: 400px;
+        width: 330px;
     `}
     ${breakpoint.down('xs')`
-        width: 300px;
+        width: 280px;
     `}
 `;
 
@@ -88,6 +87,17 @@ export const MainLeft = styled.div`
     margin: 16px 8px 16px 0px;
     width: 608px;
     height: 320px;
+    ${breakpoint.down('xl')`
+        width: 850px;
+    `}
+    ${breakpoint.down('l')`
+        width: 600px;
+    `}
+    ${breakpoint.down('m')`
+        width: 100%
+        height: unset;
+        margin: 10px 0px 10px 0px;
+    `}
 `;
 export const LeftTitle = styled.p`
     font-family: SceneMedium;
@@ -129,6 +139,10 @@ export const MainRight = styled.div`
     margin: 16px 0px 16px 8px;
     width: 336px;
     height: 320px;
+    ${breakpoint.down('m')`
+        width: 100%
+        margin: 10px 0px 10px 0px;
+    `}
 `;
 
 export const RightText = styled.p`
@@ -152,6 +166,16 @@ export const ImageContactBuilding = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0px 8px 16px 0px;
+    ${breakpoint.down('xl')`
+        width: 850px;
+    `}
+    ${breakpoint.down('l')`
+        width: 600px;
+    `}
+    ${breakpoint.down('m')`
+        width: 100%
+        margin: 10px 0px 10px 0px;
+    `}
 
 `;
 export const ImageContactInside = styled.div`
@@ -162,6 +186,16 @@ export const ImageContactInside = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0px 8px 16px 8px;
+    ${breakpoint.down('xl')`
+        width: 850px;
+    `}
+    ${breakpoint.down('l')`
+        width: 600px;
+    `}
+    ${breakpoint.down('m')`
+        width: 100%
+        margin: 10px 0px 10px 0px;
+    `}
 `;
 
 export const ImageContactWrapper = styled.div`
@@ -170,6 +204,17 @@ export const ImageContactWrapper = styled.div`
     margin: 0px 0px 16px 8px;
     height: 320px;
     width: 336px;
+    ${breakpoint.down('xl')`
+        width: 850px;
+    `}
+    ${breakpoint.down('l')`
+        width: 600px;
+    `}
+    ${breakpoint.down('m')`
+        width: 100%
+        height: unset;
+        margin: 10px 0px 10px 0px;
+    `}
 `;
 export const ImageContactText = styled.p`
     font-family: SceneMedium
@@ -199,6 +244,17 @@ export const ContactFooterWrapper = styled.div`
     margin: 0px 0px 16px 8px;
     width: 336px;
     height: 192px;
+    ${breakpoint.down('xl')`
+        width: 850px;
+    `}
+    ${breakpoint.down('l')`
+        width: 600px;
+    `}
+    ${breakpoint.down('m')`
+        width: 100%
+        height: unset;
+        margin: 10px 0px 10px 0px;
+    `}
 `;
 export const ParkingText = styled.p`
     font-family: SceneMedium
@@ -220,4 +276,15 @@ export const ImageContactFooter = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0px 8px 16px 0px;
+    ${breakpoint.down('xl')`
+        width: 850px;
+    `}
+    ${breakpoint.down('l')`
+        width: 600px;
+    `}
+    ${breakpoint.down('m')`
+        width: 100%
+        height: unset;
+        margin: 10px 0px 10px 0px;
+    `}
 `;

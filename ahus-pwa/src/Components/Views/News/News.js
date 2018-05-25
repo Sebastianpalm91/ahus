@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Wrapper, Items, ItemFooter, ItemDate, NewsTitle, NewsAuthor, TextWrapper, DateText, ContextImage } from './styles';
+import { Container, Wrapper, Items, ItemFooter, ItemDate, NewsTitle, NewsAuthor, TextWrapper, DateText, ContextImage, ImageHeader } from './styles';
 import axios from 'axios';
-
+import {IntlProvider, FormattedMessage, FormattedDate} from 'react-intl';
 export default class News extends React.Component {
   state = {
     newsfeed: []
@@ -20,12 +20,15 @@ export default class News extends React.Component {
         <Container>
             <Wrapper>
                     { this.state.newsfeed.map(news =>
-                            <Items key={news.id}>
-                        <ItemDate>
+                            <Items key={news.id} >
+                            <ImageHeader src={news.imageheader}>
+                                </ImageHeader>
+                                <ItemDate>
                             <DateText>
-                                {news.created_at}
+                                <FormattedDate value={new Date(news.created_at)}/>
                             </DateText>
                         </ItemDate>
+
                         <ItemFooter>
                             <TextWrapper>
                               <NewsTitle>
@@ -35,7 +38,7 @@ export default class News extends React.Component {
                                   / {news.author_id}
                               </NewsAuthor>
                           </TextWrapper>
-                          <ContextImage>
+                          <ContextImage src={news.imageicon}>
                           </ContextImage>
                         </ItemFooter>
                     </Items>)}
