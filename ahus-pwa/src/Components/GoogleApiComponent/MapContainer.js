@@ -8,7 +8,7 @@ import {
 } from "react-google-maps";
 import InfoBoxInner from './InfoBoxInner';
 import axios from 'axios';
-import logo from '../../Assets/Images/favicon-96x96.png'
+import logo from '../../Assets/Images/map_marker.svg'
 
 const { InfoBox } = require("react-google-maps/lib/components/addons/InfoBox");
 // const markers = {
@@ -71,7 +71,7 @@ class MapContainer extends Component {
                     this.state.issues && this.state.issues.map((issue) => (
                         <Marker
                             icon={logo}
-                            opacity={0.3}
+                            opacity={1}
                             animation={google.maps.Animation.BOUNCE}
                             key={issue.id}
                             position={{ lat: Number.parseFloat(issue.latitude), lng: Number.parseFloat(issue.longitude) }}>
