@@ -11,7 +11,7 @@ class Form extends Component {
         name: '',
         location: '',
         phone: '',
-        email: ''
+        email: '',
         latitude: "57.689470",
         longitude: "11.978107"
     };
@@ -44,10 +44,12 @@ class Form extends Component {
             email: this.state.email,
             latitude: this.state.latitude,
             longitude: this.state.longitude,
+            campus_id: '1'
         };
-        axios.post(`http://127.0.0.1:8000/api/issue`, {postIssue} )
-          .then(function (response) {
-            console.log(response);
+        axios.post(`http://127.0.0.1:8000/api/issue`, postIssue )
+        .then(function (response) {
+            console.log(postIssue);
+          console.log(response);
         })
           .catch(function (error) {
             console.log(error);
