@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Container, IssueContainer } from './styles';
 import Form from './Form';
-import GetIssues from './GetIssues';
+import GetIssues from './GetIssues/GetIssues';
 
 class ReportIssue extends Component {
     state = {

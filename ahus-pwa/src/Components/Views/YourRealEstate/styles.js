@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
-import banner from '../../../Assets/Images/newsscreen.png'
+import fastighet1 from '../../../Assets/Images/Din_fastighet1.png'
+import fastighet2 from '../../../Assets/Images/Din_fastighet2.png'
+import fastighet3 from '../../../Assets/Images/Din_fastighet3.png'
+import fastighet4 from '../../../Assets/Images/Din_fastighet4.png'
+
 
 export const Container = styled.div `
     display: flex;
@@ -33,38 +37,83 @@ export const Header = styled.header`
     width: inherit;
     height: 400px;
     position: relative;
-    background-image: url(${banner});
+    background-image: url(${fastighet1});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 `;
 
 export const HeaderInfo = styled.div `
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
     width: 288px;
     height: 60px;
-    display: flex;
-    position: absolute;
     bottom: 20px;
     left: 0;
+    padding-left: 32px;
+    text-align: left;
     background-color: #58789E;
+    color: #FFFFFF;
     ${breakpoint.down('m')`
         width: 120px;
         height: 40px;
         top: 20px;
+        padding-left: 10px;
+
+    `}
+
+`;
+export const HeaderText = styled.p`
+    font-family: SceneLight;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 19px;
+    padding: 0px;
+    margin: 0px;
+    ${breakpoint.down('m')`
+        font-size: 12px;
+    `}
+`;
+
+export const HeaderTextSub = styled.p`
+    font-family: ChronicleSemiBold;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    line-height: 19px;
+    padding: 0px;
+    margin: 0px;
+    ${breakpoint.down('m')`
+        font-size: 10px;
     `}
 `;
 
 export const HeaderViewPicture = styled.div `
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 128px;
     height: 48px;
     cursor: pointer;
-    display: flex;
     position: absolute;
     bottom: 20px;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.7);
-`;
 
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgba(0,0,0,0.8);
+`;
+export const HeaderTextPicture = styled.p`
+    font-family: SceneLight;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    padding: 0px;
+    margin: 0px;
+`;
 
 // ROW 2
 export const Main = styled.main`
@@ -156,10 +205,30 @@ export const RightText = styled.p`
 `;
 
 // ROW 3
+export const ImageContactInside = styled.div`
+    height: 320px;
+    width: 304px;
+    background-image: url(${fastighet2});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px 8px 16px 8px;
+    ${breakpoint.down('xl')`
+        width: 850px;
+    `}
+    ${breakpoint.down('l')`
+        width: 600px;
+    `}
+    ${breakpoint.down('m')`
+        width: 100%
+        margin: 10px 0px 10px 0px;
+    `}
+`;
+
 export const ImageContactBuilding = styled.div`
     height: 320px;
     width: 304px;
-    background-image: url(${banner});
+    background-image: url(${fastighet3});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -175,25 +244,6 @@ export const ImageContactBuilding = styled.div`
         margin: 10px 0px 10px 0px;
     `}
 
-`;
-export const ImageContactInside = styled.div`
-    height: 320px;
-    width: 304px;
-    background-image: url(${banner});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0px 8px 16px 8px;
-    ${breakpoint.down('xl')`
-        width: 850px;
-    `}
-    ${breakpoint.down('l')`
-        width: 600px;
-    `}
-    ${breakpoint.down('m')`
-        width: 100%
-        margin: 10px 0px 10px 0px;
-    `}
 `;
 
 export const ImageContactWrapper = styled.div`
@@ -269,7 +319,7 @@ export const ParkingText = styled.p`
 export const ImageContactFooter = styled.div`
     height: 192px;
     width: 608px;
-    background-image: url(${banner});
+    background-image: url(${fastighet4});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

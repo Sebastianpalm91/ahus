@@ -1,14 +1,20 @@
 import React from 'react';
-import { Container, Wrapper, Header, Main, HeaderInfo, HeaderViewPicture, MainLeft, MainRight, LeftText, RightText, LeftTitle, LeftTitleSub, ImageContactBuilding, ImageContactInside, ImageContactWrapper, ImageContactText, ImageContactAnchor, ContactFooterWrapper, ImageContactFooter, ParkingText } from './styles';
-
+import { Container, Wrapper, Header, Main, HeaderInfo, HeaderViewPicture, MainLeft, MainRight, LeftText, RightText, LeftTitle, LeftTitleSub, ImageContactBuilding, ImageContactInside, ImageContactWrapper, ImageContactText, ImageContactAnchor, ContactFooterWrapper, ImageContactFooter, ParkingText, HeaderText, HeaderTextSub, HeaderTextPicture } from './styles';
+import SimpleLineIcon from 'react-simple-line-icons';
 
 const YourRealEstate = () => (
   <Container>
       <Wrapper>
           <Header>
               <HeaderInfo>
+                  <HeaderText>Entré & Arkitektur</HeaderText>
+                  <HeaderTextSub>Kungliga Tekniska Högskolan</HeaderTextSub>
               </HeaderInfo>
               <HeaderViewPicture>
+                  <SimpleLineIcon name="picture" />
+                    <HeaderTextPicture>
+                        Se alla bilder
+                    </HeaderTextPicture>
               </HeaderViewPicture>
           </Header>
           <Main>
