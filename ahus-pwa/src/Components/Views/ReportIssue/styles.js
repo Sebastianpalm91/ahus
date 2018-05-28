@@ -163,7 +163,7 @@ export const IssueCampus = styled.h5`
 `;
 export const SubmitButton = styled.button`
     width: 128px;
-    height: 32px;
+    height: 42px;
     font-family: SceneMedium
     font-size: 11px;
     border-radius: 5px;

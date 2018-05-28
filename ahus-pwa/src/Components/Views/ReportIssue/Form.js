@@ -116,7 +116,7 @@ class Form extends Component {
                 </InputContainer>
                 {this.state.showPopup ?
                     <Popup
-                        text='Close Me'
+                        text='Tack för din felanmälan!'
                         closePopup={this.togglePopup.bind(this)}
                         />
                     : null

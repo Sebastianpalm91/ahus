@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { Container, PopupInner } from './styles';
+import { Container, PopupInner, Button, Title, Wrapper } from './styles';
 
 class Popup extends Component {
   render() {
     return (
       <Container>
-        <PopupInner>
-          <h1>{this.props.text}</h1>
-        <button onClick={this.props.closePopup}>close me</button>
-        </PopupInner>
+            <PopupInner>
+              <Title>{this.props.text}</Title>
+              <Button onClick={this.props.closePopup}>Stäng</Button>
+            </PopupInner>
       </Container>
     );
   }
