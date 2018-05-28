@@ -12,8 +12,8 @@ class Form extends Component {
         location: '',
         phone: '',
         email: '',
-        // latitude: "57.689470",
-        // longitude: "11.978107"
+        latitude: "57.689470",
+        longitude: "11.978107"
     };
     change = e => {
         this.props.onChange({ [e.target.name]: e.target.value});
@@ -31,8 +31,8 @@ class Form extends Component {
             location: "",
             phone: "",
             email: "",
-            // latitude: "57.689470",
-            // longitude: "11.978107",
+            latitude: "57.689470",
+            longitude: "11.978107",
         });
 
         const postIssue = {
@@ -42,10 +42,11 @@ class Form extends Component {
             location: this.state.location,
             phone: this.state.phone,
             email: this.state.email,
-            // latitude: this.state.latitude,
-            // longitude: this.state.longitude,
+            latitude: this.state.latitude,
+            longitude: this.state.longitude,
+            campus_id: '1'
         };
-        axios.post(`http://127.0.0.1:8000/api/issue`, { postIssue })
+        axios.post(`http://127.0.0.1:8000/api/issue`, postIssue )
         .then(function (response) {
             console.log(postIssue);
           console.log(response);
