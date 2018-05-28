@@ -30,7 +30,7 @@ class IssueController extends Controller
     }
 
     function post(Request $request) {
-        if(!$request->has('title', 'body', 'location', 'name', 'phone', 'email')) return response()->json(['error' => true, 'info' => 'Missing parameters']);
+        if(!$request->has('title', 'body', 'location', 'name', 'phone', 'email', 'campus_id', 'longitude', 'latitude')) return response()->json(['error' => true, 'info' => 'Missing parameters']);
 
         $issue = new Issue;
 
@@ -40,6 +40,9 @@ class IssueController extends Controller
         $issue->name = Binput::get('name');
         $issue->phone = Binput::get('phone');
         $issue->email = Binput::get('email');
+        $issue->campus_id = Binput::get('campus_id');
+        $issue->longitude = Binput::get('longitude');
+        $issue->latitude = Binput::get('latitude');
 
         $issue->save();
 
