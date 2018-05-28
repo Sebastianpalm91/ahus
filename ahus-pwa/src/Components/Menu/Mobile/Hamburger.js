@@ -51,17 +51,21 @@ var styles = {
         width: '36px',
         height: '30px',
         right: '36px',
-        top: '25px'
+        top: '92%',
     },
     bmBurgerBars: {
-        background: '#ffffff'
+        background: '#84c443'
     },
         bmCrossButton: {
         height: '44px',
-        width: '44px'
+        width: '44px',
+        right: '36px',
+        top: '92%'
     },
     bmCross: {
-        background: '#bdc3c7'
+        background: '#84c443',
+        height: '30px',
+        width: '7px'
     },
     bmMenu: {
         background: '#373a47',
