@@ -19,7 +19,7 @@
         "type": "image/png"
     }
 ],
-  "start_url": "/nyheter",
+  "start_url": "/",
   "background_color": "#ffffff",
   "theme_color": "#5D789B",
   "display": "standalone"

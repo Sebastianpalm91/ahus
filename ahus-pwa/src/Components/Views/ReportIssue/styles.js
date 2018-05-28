@@ -186,31 +186,31 @@ export const SubmitButton = styled.button`
 // GET ISSUES
 export const IssueContainer = styled.div`
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
 `;
 export const IssuesUl = styled.ul`
+    margin-left: 35px;
+    margin-right: 35px;
     list-style-type: none;
     padding-left: 0px;
 `;
 
 export const IssueList = styled.li`
     height: 80px;
-    width: 550px;
     padding: 5px;
     margin-top: 10px;
     border-radius: 5px;
     border: 1px solid black;
     ${breakpoint.down('m')`
         height: 80px;
-        width: 350px;
+
     `}
     ${breakpoint.down('s')`
         height: 80px;
-        width: 330px;
+
     `}
     ${breakpoint.down('xs')`
-        width: 280px;
+
         height: 80px;
     `}
 `;

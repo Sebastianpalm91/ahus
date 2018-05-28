@@ -18,7 +18,7 @@ export default class PersonList extends React.Component {
   render() {
     return (
         <IssuesUl>
-            { this.state.issues.map(issue => <IssueList key={issue.id}> <IssuedTitle>{issue.title}</IssuedTitle> <Body>{issue.body}</Body></IssueList>)}
+            { this.state.issues.map(issue => <IssueList key={issue.id}> <IssuedTitle>Titel: {issue.title}</IssuedTitle> <Body>Beskrivning:<br></br> {issue.body}</Body></IssueList>)}
         </IssuesUl>
     )
   }
