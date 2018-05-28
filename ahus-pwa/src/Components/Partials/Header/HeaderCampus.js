@@ -23,7 +23,7 @@ class HeaderCampus extends Component {
                 <SelectWrapper>
                 <Select onChange={this.props.changeCampus}>
                 {this.state.campuses.map(campus =>
-                    <Option key={campus.id} id={campus.id}>{campus.name} | {campus.city.name} </Option>
+                    <Option key={campus.id} id={campus.id} data-long={campus.longitude} data-lat={campus.latitude}>{campus.name} | {campus.city.name} </Option>
                 )}
                 </Select>
                 </SelectWrapper>
