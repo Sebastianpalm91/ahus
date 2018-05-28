@@ -1,7 +1,25 @@
-import React from 'react';
-import { Li, StyledLink, Logo, MenuWrapper, Ul } from './styles';
+import React, { Component } from 'react';
+import { Li, StyledLink, Logo, MenuWrapper, Ul, Select, Option, SelectWrapper } from './styles';
 import { stack as Menu } from 'react-burger-menu'
-const Hamburger = () => (
+import HeaderCampus from '../../Partials/Header/HeaderCampus';
+import axios from 'axios';
+
+class Hamburger extends Component {
+    constructor(props){
+        super(props);
+    }
+    state = {
+        campuses: []
+    }
+    componentDidMount() {
+        axios.get(`http://127.0.0.1:8000/api/campus`)
+            .then(res => {
+                const campuses = res.data.campus;
+                this.setState({ campuses });
+            })
+    }
+    render() {
+    return(
     <MenuWrapper>
         <Menu isOpen={ false } styles={ styles } right>
             <Logo></Logo>
@@ -11,10 +29,22 @@ const Hamburger = () => (
                 <Li><StyledLink className="menu-item" to='/nyheter'>Nyheter</StyledLink></Li>
                 <Li><StyledLink className="menu-item" to='/kontakt'>Kontakt</StyledLink></Li>
                 <Li><StyledLink className="menu-item" to='/dinfastiget'>Din Fastighet</StyledLink></Li>
+                <Li>
+                    <SelectWrapper>
+                        <Select onChange={this.props.changeCampus}>
+                            <Option>Välj campus här</Option>
+                            {this.state.campuses.map(campus =>
+                                <Option key={campus.id} id={campus.id} data-long={campus.longitude} data-lat={campus.latitude}>{campus.name} | {campus.city.name} </Option>
+                            )}
+                        </Select>
+                    </SelectWrapper>
+                </Li>
             </Ul>
         </Menu>
     </MenuWrapper>
 )
+}
+}
 var styles = {
   bmBurgerButton: {
     position: 'fixed',

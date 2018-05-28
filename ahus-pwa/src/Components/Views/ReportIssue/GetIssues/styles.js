@@ -13,8 +13,11 @@ export const Title = styled.h1`
         margin: 0 auto;
     `}
     ${breakpoint.down('s')`
+        font-size: 20px;
         margin-left: 15px;
         margin-right: 15px;
+        margin-bottom: 10px;
+        width: auto;
     `}
 `;
 

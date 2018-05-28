@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom'
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 import logo from '../../../Assets/Images/Logga192x192.svg'
+import arrow from '../../../Assets/Images/Arrow-down-white.svg'
 
 export const Li = styled.li`
     padding: 20px;
@@ -16,8 +17,11 @@ export const Ul = styled.ul`
 `;
 
 export const StyledLink = styled(Link)`
-    font-size: 1em;
-    color: white;
+    font-family: SceneMedium;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #ffffff;
     text-decoration: none;
     &:hover {
         color: black;
@@ -40,4 +44,34 @@ export const MenuWrapper = styled.div`
     ${breakpoint.up('m')`
         display: none;`
     }
+`;
+
+// SELECT CAMPUS IN HAMBURGER
+
+export const SelectWrapper = styled.div`
+    ${breakpoint.up('m')`
+        display: none;
+    `}
+`;
+
+export const Select = styled.select`
+    width: 260px;
+    font-family: SceneMedium;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #ffffff;
+    border: none;
+    background-color: unset;
+    outline: none;
+    appearance: none;
+    background-image: url(${arrow});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position-x: 220px;
+    cursor: pointer;
+`;
+export const Option = styled.option`
+
 `;
