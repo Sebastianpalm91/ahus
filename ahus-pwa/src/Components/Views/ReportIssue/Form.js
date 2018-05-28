@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 import { InputFields, SubmitButton, InputContainer, InputTextArea, DescriptionWrapper, InfoContainer, IssueCampus, IssueSubTitle, Title, Wrapper, IssueDescription } from './styles';
 import axios from 'axios';
-// import Popup from './Popup/Popup';
+import Popup from './Popup/Popup';
 
 class Form extends Component {
+
+    togglePopup() {
+      this.setState({
+        showPopup: !this.state.showPopup
+      });
+    }
     state = {
+        showPopup: false,
         title: '',
         body: '',
         name: '',
@@ -24,6 +31,7 @@ class Form extends Component {
         e.preventDefault();
         // this.props.onSubmit(this.state);
         this.setState({
+            showPopup: true,
             title: "",
             body: "",
             name: "",
@@ -103,10 +111,16 @@ class Form extends Component {
                         placeholder="Beskrivning"
                         onChange={e => this.change(e)}
                         />
-                    <SubmitButton type="submit">Felanmäl</SubmitButton>
-
+                    <SubmitButton onClick={this.state.togglePopup} type="submit">Felanmäl</SubmitButton>
                 </DescriptionWrapper>
                 </InputContainer>
+                {this.state.showPopup ?
+                    <Popup
+                        text='Close Me'
+                        closePopup={this.togglePopup.bind(this)}
+                        />
+                    : null
+                }
             </Wrapper>
       );
     }
