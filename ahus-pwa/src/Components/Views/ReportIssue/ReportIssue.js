@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Container, IssueContainer } from './styles';
+import { Container, IssueContainer, Horizontal } from './styles';
 import Form from './Form';
 import GetIssues from './GetIssues/GetIssues';
 
@@ -19,6 +19,7 @@ class ReportIssue extends Component {
         return (
             <Container>
                 <Form onChange={fields => this.onChange(fields)} current_campus={this.props.current_campus}/>
+                <Horizontal />
                 <IssueContainer>
                     <GetIssues></GetIssues>
                 </IssueContainer>

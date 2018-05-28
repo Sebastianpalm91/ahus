@@ -207,3 +207,10 @@ export const InfoContainer = styled.div`
         padding: 15px;
     `}
 `;
+
+
+export const Horizontal = styled.hr`
+    border-color: rgba(207, 207, 207, 0.14);
+    border-bottom: 0px;
+    width: 90%;
+`;

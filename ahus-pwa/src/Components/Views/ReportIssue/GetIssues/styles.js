@@ -12,6 +12,10 @@ export const Title = styled.h1`
         width: 350px;
         margin: 0 auto;
     `}
+    ${breakpoint.down('s')`
+        margin-left: 15px;
+        margin-right: 15px;
+    `}
 `;
 
 export const IssuesUl = styled.ul`
@@ -21,6 +25,7 @@ export const IssuesUl = styled.ul`
     margin-right: 20px;
     list-style-type: none;
     padding-left: 0px;
+    margin-top: 40px;
 `;
 
 export const Wrapper = styled.div`
