@@ -4,7 +4,6 @@ import axios from 'axios';
 // import Popup from './Popup/Popup';
 
 class Form extends Component {
-
     state = {
         title: '',
         body: '',
@@ -44,7 +43,7 @@ class Form extends Component {
             email: this.state.email,
             latitude: this.state.latitude,
             longitude: this.state.longitude,
-            campus_id: '1'
+            campus_id: this.props.current_campus
         };
         axios.post(`http://127.0.0.1:8000/api/issue`, postIssue )
         .then(function (response) {

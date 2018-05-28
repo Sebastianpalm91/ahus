@@ -14,7 +14,6 @@ class HeaderCampus extends Component {
             .then(res => {
                 const campuses = res.data.campus;
                 this.setState({ campuses });
-                console.log(campuses);
             })
     }
     render() {
@@ -22,9 +21,9 @@ class HeaderCampus extends Component {
             <CampusContainer>
                 <StyledLink to='/' alt="Logo-Hem" name="Logo"><Logo></Logo></StyledLink>
                 <SelectWrapper>
-                <Select>
+                <Select onChange={this.props.changeCampus}>
                 {this.state.campuses.map(campus =>
-                    <Option key={campus.id}>{campus.name} | {campus.city.name} </Option>
+                    <Option key={campus.id} id={campus.id}>{campus.name} | {campus.city.name} </Option>
                 )}
                 </Select>
                 </SelectWrapper>
