@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GrahamCampbell\Binput\Facades\Binput;
+use Illuminate\Contracts\Validation\Validator;
 use App\Issue;
 use App\Campus;
 
@@ -30,8 +31,7 @@ class IssueController extends Controller
     }
 
     function post(Request $request) {
-
-        $validate = requset()->validate([
+        $validate = Validator($request->all(), [
             'title' => 'required',
             'body' => 'required',
             'campus_id' => 'required',
@@ -40,10 +40,10 @@ class IssueController extends Controller
             'latitude' => 'required',
             'name' => 'required',
             'phone' => 'required',
-            'email' => 'required'
+            'email' => 'required',
         ]);
 
-        if($validate->errors) return response()->json(['error' => true, 'info' => $validate->errors->all()]);
+        if($validate->fails()) return response()->json(['error' => true, 'info' => $validate->failed()]);
 
         $issue = new Issue;
 
@@ -60,7 +60,8 @@ class IssueController extends Controller
         $issue->save();
 
         return response()->json([
-            "status" => "Might have worked"
+            "error" => false,
+            "status" => 200
         ]);
     }
 
