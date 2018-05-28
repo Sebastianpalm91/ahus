@@ -18,7 +18,7 @@ class ReportIssue extends Component {
     render() {
         return (
             <Container>
-                <Form onChange={fields => this.onChange(fields)}/>
+                <Form onChange={fields => this.onChange(fields)} current_campus={this.props.current_campus}/>
                 <IssueContainer>
                     <GetIssues></GetIssues>
                 </IssueContainer>

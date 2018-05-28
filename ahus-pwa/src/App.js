@@ -9,15 +9,25 @@ import Hamburger from './Components/Menu/Mobile/Hamburger'; // Mobile Menu
 import { MainContainer } from './Assets/Styles/Src/App.js';
 
 class App extends Component {
+    state = {
+        current_campus: 1,
+    }
+
+    changeCampus(event) {
+        this.setState({
+            current_campus: event.target.options[event.target.selectedIndex].getAttribute('id')
+        })
+    }
+
   render() {
     return (
         <div>
             <Header></Header>
             <Hamburger></Hamburger>
-            <HeaderCampus></HeaderCampus>
+            <HeaderCampus changeCampus={this.changeCampus.bind(this)}></HeaderCampus>
                 <MainContainer>
                     <Navigation></Navigation>
-                    <Main />
+                    <Main current_campus={this.state.current_campus} />
                 </MainContainer>
                 <Footer></Footer>
         </div>
