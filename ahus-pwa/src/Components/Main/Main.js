@@ -13,6 +13,10 @@ class Main extends Component {
     constructor(props){
         super(props)
     }
+    componentDidUpdate(){
+        console.log("MAIN Props")
+        console.log(this.props)
+    }
     render() {
         return (
                 <TransitionGroup className="transition-group">
@@ -23,7 +27,7 @@ class Main extends Component {
                     >
                         <section className="route-section">
                             <Switch location={this.props.location}>
-                                <Route exact path='/' component={Home}/>
+                                <Route exact path='/' /*component={Home}*/ render={() => <Home current_campus={this.props.current_campus} />}/>
                                 <Route exact path='/Felanmalan' render={() => <ReportIssue current_campus={this.props.current_campus} />}/>
                                 <Route exact path='/nyheter' component={News}/>
                                 <Route exact path='/kontakt' component={Contact}/>

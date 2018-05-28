@@ -8,7 +8,7 @@ import {
 } from "react-google-maps";
 import InfoBoxInner from './InfoBoxInner';
 import axios from 'axios';
-import logo from '../../Assets/Images/map_marker.svg'
+import logo from '../../Assets/Images/favicon-96x96.png'
 
 const { InfoBox } = require("react-google-maps/lib/components/addons/InfoBox");
 // const markers = {
@@ -28,7 +28,7 @@ const { InfoBox } = require("react-google-maps/lib/components/addons/InfoBox");
 
 class MapContainer extends Component {
     constructor(props) {
-      super();
+      super(props);
 
       this.state = {
         ...props
@@ -43,14 +43,24 @@ class MapContainer extends Component {
         .then(res => {
           const issues = res.data.issues;
           this.setState({ issues });
-          console.log(issues);
         })
     }
+
+    componentWillUpdate() {
+        console.log("MAP Props PRE UP")
+        console.log(this.props)
+    }
+
+    componentDidUpdate(){
+        console.log("MAP Props POST UP")
+        console.log(this.props)
+    }
     render() {
+        const newCenter = {lat: parseFloat(this.props.current_campus.lat), lng: parseFloat(this.props.current_campus.long)}
         return (
             <GoogleMap
                     defaultZoom={16}
-                    defaultCenter={{ lat: 57.688836, lng: 11.977970 }}
+                    center={newCenter}
                     style={{margineft: '20px'}}
                 >
                 <Marker
@@ -60,9 +70,8 @@ class MapContainer extends Component {
                 {
                     this.state.issues && this.state.issues.map((issue) => (
                         <Marker
-                            style={{height: `10px`, width: `10px`}}
                             icon={logo}
-                            opacity={1}
+                            opacity={0.3}
                             animation={google.maps.Animation.BOUNCE}
                             key={issue.id}
                             position={{ lat: Number.parseFloat(issue.latitude), lng: Number.parseFloat(issue.longitude) }}>

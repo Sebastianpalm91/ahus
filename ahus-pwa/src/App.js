@@ -42,6 +42,18 @@ class App extends Component {
             })
     }
 
+    componentDidUpdate(){
+        console.log("APP State")
+        console.log(this.state)
+    }
+
+    hasValues([...data]){
+        data.forEach(element => {
+            if(element === '') return false
+        });
+        return true
+    }
+
   render() {
     return (
         <div>
@@ -50,7 +62,7 @@ class App extends Component {
             <HeaderCampus changeCampus={this.changeCampus.bind(this)}></HeaderCampus>
                 <MainContainer>
                     <Navigation></Navigation>
-                    <Main current_campus={this.state.current_campus} />
+                    <Main current_campus={ this.hasValues(this.state.current_campus) ? this.state.current_campus : {id: 1, lat: 57.7, long: 12}} />
                 </MainContainer>
                 <Footer></Footer>
         </div>
