@@ -30,7 +30,20 @@ class IssueController extends Controller
     }
 
     function post(Request $request) {
-        if(!$request->has('title', 'body', 'location', 'name', 'phone', 'email', 'campus_id', 'longitude', 'latitude')) return response()->json(['error' => true, 'info' => 'Missing parameters']);
+
+        $validate = requset()->validate([
+            'title' => 'required',
+            'body' => 'required',
+            'campus_id' => 'required',
+            'location' => 'required',
+            'longitude' => 'required',
+            'latitude' => 'required',
+            'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required'
+        ]);
+
+        if($validate->errors) return response()->json(['error' => true, 'info' => $validate->errors->all()]);
 
         $issue = new Issue;
 
