@@ -19,29 +19,29 @@ export default class News extends React.Component {
     return (
         <Container>
             <Wrapper>
-                    { this.state.newsfeed.map(news =>
-                            <Items key={news.id} >
-                            <ImageHeader src={news.imageheader}>
-                                </ImageHeader>
-                                <ItemDate>
-                            <DateText>
-                                <FormattedDate value={new Date(news.created_at)}/>
-                            </DateText>
-                        </ItemDate>
-
+                { this.state.newsfeed.map(news =>
+                    <Items key={news.id} >
+                        <ImageHeader src={news.imageheader}>
+                        </ImageHeader>
+                            <ItemDate>
+                                <DateText>
+                                    <FormattedDate value={new Date(news.created_at)}/>
+                                </DateText>
+                            </ItemDate>
                         <ItemFooter>
                             <TextWrapper>
-                              <NewsTitle>
-                                  {news.title}
-                              </NewsTitle>
-                              <NewsAuthor>
-                                  / {news.author_id}
-                              </NewsAuthor>
-                          </TextWrapper>
-                          <ContextImage src={news.imageicon}>
-                          </ContextImage>
+                                <NewsTitle>
+                                    {news.title}
+                                </NewsTitle>
+                                <NewsAuthor>
+                                    / {news.author_id}
+                                </NewsAuthor>
+                            </TextWrapper>
+                            <ContextImage src={news.imageicon}>
+                            </ContextImage>
                         </ItemFooter>
-                    </Items>)}
+                    </Items>
+                )}
                 </Wrapper>
             </Container>
     )

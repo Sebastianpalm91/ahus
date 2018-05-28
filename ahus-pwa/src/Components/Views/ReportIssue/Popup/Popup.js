@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, PopupInner, Button, Title, Wrapper } from './styles';
+import { Container, PopupInner, Button, Title } from './styles';
 
 class Popup extends Component {
   render() {

@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 import FirealarmIcon from '../../../Assets/Images/Brandlarm1.svg'
-import ConstructionIcon from '../../../Assets/Images/Bygghjalm-gul.svg'
-import ElectricsIcon from '../../../Assets/Images/Stromavbrott1.svg'
-import CykelIcon from '../../../Assets/Images/Cykel.svg'
+// import ConstructionIcon from '../../../Assets/Images/Bygghjalm-gul.svg'
+// import ElectricsIcon from '../../../Assets/Images/Stromavbrott1.svg'
+// import CykelIcon from '../../../Assets/Images/Cykel.svg'
 
 import FirealarmBg from '../../../Assets/Images/Nyhet2.jpg'
-import CykelBg from '../../../Assets/Images/Nyhet1.jpg'
-import ConstructionBg from '../../../Assets/Images/Nyhet3.jpg'
+// import CykelBg from '../../../Assets/Images/Nyhet1.jpg'
+// import ConstructionBg from '../../../Assets/Images/Nyhet3.jpg'
 
 export const Container = styled.div `
     background-image: url(${FirealarmBg});
@@ -130,4 +130,8 @@ export const ContextImage = styled.img`
     height: 30px;
     width: 30px;
     margin-right: 16px;
+    background-image: url(${FirealarmIcon});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 `;

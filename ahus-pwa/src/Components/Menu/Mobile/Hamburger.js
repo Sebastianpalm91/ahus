@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Li, StyledLink, Logo, MenuWrapper, Ul, Select, Option, SelectWrapper } from './styles';
 import { stack as Menu } from 'react-burger-menu'
-import HeaderCampus from '../../Partials/Header/HeaderCampus';
 import axios from 'axios';
 
 class Hamburger extends Component {
-    constructor(props){
-        super(props);
-    }
+    // constructor(props){
+    //     super(props);
+    // }
     state = {
         campuses: []
     }
