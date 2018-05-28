@@ -14,8 +14,8 @@ class AddLonLatToIssues extends Migration
     public function up()
     {
         Schema::table('issues', function(Blueprint $table){
-            $table->string('latitude')->after('location');
-            $table->string('longitude')->after('location');
+            $table->string('latitude')->after('location')->nullable();
+            $table->string('longitude')->after('location')->nullable();
         });
     }
 

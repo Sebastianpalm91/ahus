@@ -1,9 +1,16 @@
 import styled from "styled-components";
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
-import bg from '../../../Assets/Images/newsscreen.png'
+import FirealarmIcon from '../../../Assets/Images/Brandlarm1.svg'
+import ConstructionIcon from '../../../Assets/Images/Bygghjalm-gul.svg'
+import ElectricsIcon from '../../../Assets/Images/Stromavbrott1.svg'
+import CykelIcon from '../../../Assets/Images/Cykel.svg'
+
+import FirealarmBg from '../../../Assets/Images/Nyhet2.jpg'
+import CykelBg from '../../../Assets/Images/Nyhet1.jpg'
+import ConstructionBg from '../../../Assets/Images/Nyhet3.jpg'
 
 export const Container = styled.div `
-    background-image: url(${bg});
+    background-image: url(${FirealarmBg});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

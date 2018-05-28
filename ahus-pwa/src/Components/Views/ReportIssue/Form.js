@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { InputFields, SubmitButton, InputContainer, InputTextArea, DescriptionWrapper, InfoContainer, IssueCampus, IssueSubTitle, Title, Wrapper, IssueDescription } from './styles';
 import axios from 'axios';
+// import Popup from './Popup/Popup';
 
 class Form extends Component {
+
     state = {
         title: '',
         body: '',
@@ -95,6 +97,7 @@ class Form extends Component {
                         onChange={e => this.change(e)}
                         />
                     <SubmitButton type="submit">Felanmäl</SubmitButton>
+
                 </DescriptionWrapper>
                 </InputContainer>
             </Wrapper>
