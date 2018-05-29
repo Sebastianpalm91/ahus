@@ -52,7 +52,7 @@ class MapContainer extends Component {
     }
 
     componentDidUpdate(){
-        console.log("MAP Props POST UP")
+        console.log("MAP Props POST UP");
         console.log(this.props)
     }
     render() {

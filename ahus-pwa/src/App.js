@@ -42,11 +42,6 @@ class App extends Component {
             })
     }
 
-    componentDidUpdate(){
-        console.log("APP State")
-        console.log(this.state)
-    }
-
     hasValues([...data]){
         data.forEach(element => {
             if(element === '') return false
