@@ -24,9 +24,11 @@ class Home extends Component {
           <Wrapper>
             <ContainerText>
               <Title>Välkommen!</Title>
-              <TitleSub>Innan vi börjar</TitleSub>
+              <TitleSub>Innan vi börjar...</TitleSub>
               <WrapperText>
                 <Text>
+                  Så vill vi säga att menyn hittar du i det högra hörnet längst ner för att enkelt komma åt den och kunna navigare runt i applikationen. <br></br>
+                    <br></br>
                   Det ska vara enkelt att kunna felanmäla en händelse i din
                   fastighet. Att anmäla ett fel är snabbt och enkelt. Navigera
                   dig igenom menyn till vänster för flera val. Om du återkommer

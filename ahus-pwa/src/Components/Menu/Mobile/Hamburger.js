@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Li, StyledLink, Logo, MenuWrapper, Ul, Select, Option, SelectWrapper, Back } from './styles';
+import { Li, StyledLink, Logo, MenuWrapper, Ul, Select, Option, SelectWrapper, Back, Burger } from './styles';
 import { stack as Menu } from 'react-burger-menu'
 import axios from 'axios';
+import burger from './img/burgericon.svg'
 
 class Hamburger extends Component {
     // constructor(props){
@@ -20,7 +21,12 @@ class Hamburger extends Component {
     render() {
         return(
             <MenuWrapper>
-                <Menu isOpen={ false } styles={ styles } right>
+                <Menu
+                    isOpen={ false }
+                    styles={ styles }
+                    right
+                    burgerButtonClassName={ "bmIcon" }
+                    customBurgerIcon={ <Burger src={`${burger}`}></Burger> }>
                     <Logo></Logo>
                     <Ul>
                         <Li><StyledLink className="menu-item" to='/' alt="Hem">Hem</StyledLink></Li>
@@ -45,11 +51,10 @@ class Hamburger extends Component {
     }
 }
 var styles = {
-
     bmBurgerButton: {
         position: 'fixed',
-        width: '36px',
-        height: '30px',
+        width: '55px',
+        height: '55px',
         right: '45px',
         top: '89%',
     },
@@ -57,18 +62,18 @@ var styles = {
         background: '#84c443'
     },
         bmCrossButton: {
-        height: '44px',
-        width: '44px',
-        right: '45px',
+        height: '55px',
+        width: '55px',
+        right: '60px',
         top: '89%',
         button: {
-            left: '12px'
+            left: '15px'
         },
     },
     bmCross: {
         background: '#84c443',
-        height: '30px',
-        width: '7px'
+        height: '35px',
+        width: '9px'
     },
     bmMenu: {
         background: '#373a47',

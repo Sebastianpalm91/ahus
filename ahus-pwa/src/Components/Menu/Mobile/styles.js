@@ -4,6 +4,14 @@ import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 import logo from '../../../Assets/Images/Logga192x192.svg'
 import arrow from '../../../Assets/Images/Arrow-down-white.svg'
 
+export const Burger = styled.img`
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45px;
+    width: 45px;
+`;
+
 export const Li = styled.li`
     padding: 20px;
     list-style: none;

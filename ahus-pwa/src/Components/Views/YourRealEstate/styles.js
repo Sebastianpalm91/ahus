@@ -14,7 +14,8 @@ export const Container = styled.div `
 //
 export const Wrapper = styled.div`
     width: 960px;
-    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     ${breakpoint.down('xl')`
         width: 850px;
     `}
@@ -25,7 +26,7 @@ export const Wrapper = styled.div`
         width: 500px;
     `}
     ${breakpoint.down('s')`
-        width: 330px;
+        width: 340px;
     `}
     ${breakpoint.down('xs')`
         width: 280px;
@@ -41,6 +42,7 @@ export const Header = styled.header`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 10px;
 `;
 
 export const HeaderInfo = styled.div `
@@ -101,7 +103,6 @@ export const HeaderViewPicture = styled.div `
     position: absolute;
     bottom: 20px;
     right: 0;
-
     background-color: rgba(255, 255, 255, 0.7);
     color: rgba(0,0,0,0.8);
 `;
@@ -133,7 +134,6 @@ export const MainLeft = styled.div`
     background-color: #E7EDF0;
     margin: 16px 8px 16px 0px;
     width: 608px;
-    height: 320px;
     ${breakpoint.down('xl')`
         width: 850px;
     `}
@@ -186,7 +186,9 @@ export const MainRight = styled.div`
     background-color: #E7EDF0;
     margin: 16px 0px 16px 8px;
     width: 336px;
-    height: 320px;
+    ${breakpoint.up('l')`
+        height: unset;
+    `}
     ${breakpoint.down('m')`
         width: 100%
         margin: 10px 0px 10px 0px;
@@ -336,8 +338,7 @@ export const ImageContactFooter = styled.div`
         width: 600px;
     `}
     ${breakpoint.down('m')`
-        width: 100%
-        height: unset;
+        width: 100%;
         margin: 10px 0px 10px 0px;
     `}
 `;
