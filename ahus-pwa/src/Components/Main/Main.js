@@ -10,10 +10,6 @@ import Contact from '../Views/Contact/Contact';
 import YourRealEstate from '../Views/YourRealEstate/YourRealEstate';
 
 class Main extends Component {
-    constructor(props){
-        super(props)
-    }
-    
     render() {
         return (
                 <TransitionGroup className="transition-group">

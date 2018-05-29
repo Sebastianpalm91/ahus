@@ -14,7 +14,6 @@ class ReportIssue extends Component {
             ...updatedValue
         }});
     };
-    // <p>{this.state.fields.title}{this.state.fields.body}{this.state.fields.name}</p>
     render() {
         return (
             <Container>

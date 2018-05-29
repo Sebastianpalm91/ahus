@@ -11,20 +11,6 @@ import axios from 'axios';
 import logo from '../../Assets/Images/map_marker.svg'
 
 const { InfoBox } = require("react-google-maps/lib/components/addons/InfoBox");
-// const markers = {
-//       1: {
-//         lat: 57.689470,
-//         lng: 11.978107
-//       },
-//       2: {
-//         lat: 57.688833,
-//         lng: 11.979287
-//       },
-//       3: {
-//         lat: 57.689085,
-//         lng: 11.976540
-//       },
-// }
 
 class MapContainer extends Component {
     constructor(props) {
@@ -64,7 +50,6 @@ class MapContainer extends Component {
                     style={{marginLeft: '20px'}}
                 >
                 <Marker
-                  position={newCenter}
                   onClick={this.props.onToggleOpen}
                 />
                 {

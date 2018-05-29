@@ -5,7 +5,6 @@ import GooglePlus from '../../../Assets/Images/Google-plus.svg'
 import Facebook from '../../../Assets/Images/Facebook.svg'
 
 const Navigation = () => (
-
     <Container>
             <Ul>
                 <NavItems activeClassName="active" to='/felanmalan'>FELANMÄLAN</NavItems>
@@ -20,7 +19,6 @@ const Navigation = () => (
                 <SocialIcons src={Facebook}></SocialIcons>
             </SocialWrapper>
     </Container>
-
 )
 
 export default Navigation;

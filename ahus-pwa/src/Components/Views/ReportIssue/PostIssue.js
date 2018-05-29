@@ -12,8 +12,6 @@ export default class PersonList extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-
-
   }
 
   render() {

@@ -13,10 +13,6 @@ import {
 import MapContainer from "../../GoogleApiComponent/MapContainer"
 
 class Home extends Component {
-    constructor(props){
-        super(props);
-    }
-
   render() {
     return (
       <Container>

@@ -8,7 +8,7 @@ class Contact extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://127.0.0.1:8000/user`)
+    axios.get(`http://127.0.0.1:8000/api/user`)
       .then(res => {
         const users = res.data.users;
         this.setState({ users });
