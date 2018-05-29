@@ -63,10 +63,13 @@ export const Select = styled.select`
     background-size: 16px;
     background-position-x: 310px;
     cursor: pointer;
+    :nth-child(1) {
+        color: rgba(0,0,0,0.2);
+    }
 `;
 
 export const Option = styled.option`
-
+    font-family: SceneMedium;
 `;
 
 export const StyledLinkAdmin = styled(Link)`

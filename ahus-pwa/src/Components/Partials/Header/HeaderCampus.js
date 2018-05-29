@@ -23,7 +23,7 @@ class HeaderCampus extends Component {
                 <StyledLink to='/' alt="Logo-Hem" name="Logo"><Logo></Logo></StyledLink>
                 <SelectWrapper>
                     <Select onChange={this.props.changeCampus}>
-                        <Option>Välj campus här...</Option>
+                        <Option>--Välj campus här--</Option>
                         {this.state.campuses.map(campus =>
                             <Option key={campus.id} id={campus.id} data-long={campus.longitude} data-lat={campus.latitude}>{campus.name} | {campus.city.name} </Option>
                         )}

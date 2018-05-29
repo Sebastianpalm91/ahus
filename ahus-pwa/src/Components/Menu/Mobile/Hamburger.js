@@ -56,7 +56,7 @@ var styles = {
         width: '55px',
         height: '55px',
         right: '45px',
-        top: '89%',
+        bottom: '9%',
     },
     bmBurgerBars: {
         background: '#84c443'
@@ -65,10 +65,8 @@ var styles = {
         height: '55px',
         width: '55px',
         right: '60px',
-        top: '89%',
-        button: {
-            left: '15px'
-        },
+        bottom: '7%',
+        top: 'unset',
     },
     bmCross: {
         background: '#84c443',
