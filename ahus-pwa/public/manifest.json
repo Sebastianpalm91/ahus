@@ -4,17 +4,17 @@
   "description": "Akademiska Hus Tar hand om ditt Campus.",
   "icons": [
     {
-        "src": "/Icon.svg",
+        "src": "./Logga192x192.png",
         "sizes": "192x192",
         "type": "image/png"
     },
     {
-        "src": "/Logga32x32.png",
+        "src": "./Logga32x32.png",
         "sizes": "32x32",
         "type": "image/png"
     },
     {
-        "src": "/Icon.svg",
+        "src": "/Logga192x192.png",
         "sizes": "512x512",
         "type": "image/png"
     }

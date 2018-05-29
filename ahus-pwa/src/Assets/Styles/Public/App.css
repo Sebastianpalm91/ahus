@@ -4,4 +4,30 @@ body html {
   margin: 0px;
   padding: 0px; }
 
+  @font-face {
+      font-family: 'ChronicleSemiBold';
+      src: url('./ChronicleDeckCond-Semibold.woff');
+  }
+
+  @font-face {
+      font-family: 'ChronicleLight';
+      src: url('./ChronicleDispCond-Light.woff');
+  }
+
+  @font-face {
+      font-family: 'ChronicleRoman';
+      src: url('./ChronicleTextG1-Roman.woff');
+  }
+
+  @font-face {
+      font-family: 'SceneLight';
+      src: url('./SceneAH-Light.woff');
+  }
+
+  @font-face {
+      font-family: 'SceneMedium';
+      src: url('./SceneAH-Medium.woff');
+  }
+
+
 /*# sourceMappingURL=App.css.map */

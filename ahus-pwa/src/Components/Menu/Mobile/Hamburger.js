@@ -31,7 +31,7 @@ class Hamburger extends Component {
                         <Li>
                             <SelectWrapper>
                                 <Select onChange={this.props.changeCampus}>
-                                    <Option>Välj campus här</Option>
+                                    <Option>Välj campus här...</Option>
                                     {this.state.campuses.map(campus =>
                                         <Option key={campus.id} id={campus.id} data-long={campus.longitude} data-lat={campus.latitude}>{campus.name} | {campus.city.name} </Option>
                                     )}
@@ -50,8 +50,8 @@ var styles = {
         position: 'fixed',
         width: '36px',
         height: '30px',
-        right: '36px',
-        top: '92%',
+        right: '45px',
+        top: '89%',
     },
     bmBurgerBars: {
         background: '#84c443'
@@ -59,8 +59,11 @@ var styles = {
         bmCrossButton: {
         height: '44px',
         width: '44px',
-        right: '36px',
-        top: '92%'
+        right: '45px',
+        top: '89%',
+        button: {
+            left: '12px'
+        },
     },
     bmCross: {
         background: '#84c443',
