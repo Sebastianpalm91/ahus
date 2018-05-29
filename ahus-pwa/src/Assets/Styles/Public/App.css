@@ -6,27 +6,27 @@ body html {
 
   @font-face {
       font-family: 'ChronicleSemiBold';
-      src: url('./ChronicleDeckCond-Semibold.woff');
+      src: url('./Font/ChronicleDeckCond-Semibold.woff');
   }
 
   @font-face {
       font-family: 'ChronicleLight';
-      src: url('./ChronicleDispCond-Light.woff');
+      src: url('./Font/ChronicleDispCond-Light.woff');
   }
 
   @font-face {
       font-family: 'ChronicleRoman';
-      src: url('./ChronicleTextG1-Roman.woff');
+      src: url('./Font/ChronicleTextG1-Roman.woff');
   }
 
   @font-face {
       font-family: 'SceneLight';
-      src: url('./SceneAH-Light.woff');
+      src: url('./Font/SceneAH-Light.woff');
   }
 
   @font-face {
       font-family: 'SceneMedium';
-      src: url('./SceneAH-Medium.woff');
+      src: url('./Font/SceneAH-Medium.woff');
   }
 
 
