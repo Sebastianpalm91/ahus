@@ -61,7 +61,7 @@ class MapContainer extends Component {
             <GoogleMap
                     defaultZoom={16}
                     center={newCenter}
-                    style={{margineft: '20px'}}
+                    style={{marginLeft: '20px'}}
                 >
                 <Marker
                   position={newCenter}
