@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
-import bg from '../../../Assets/Images/homescreen.png'
+import bg from '../../../Assets/Images/homescreen.jpg'
 
 export const Container = styled.div `
     width: 100%;
