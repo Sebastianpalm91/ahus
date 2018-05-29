@@ -21,7 +21,7 @@ export default class News extends React.Component {
             <Wrapper>
                 { this.state.newsfeed.map(news =>
                     <Items key={news.id} >
-                        <ImageHeader src={news.imageheader}>
+                        <ImageHeader src={`./Images/${news.imageheader}`}>
                         </ImageHeader>
                             <ItemDate>
                                 <DateText>
@@ -34,10 +34,10 @@ export default class News extends React.Component {
                                     {news.title}
                                 </NewsTitle>
                                 <NewsAuthor>
-                                    / {news.author_id}
+                                    / {news.author.name}
                                 </NewsAuthor>
                             </TextWrapper>
-                            <ContextImage src={news.imageicon}>
+                            <ContextImage src={`./Images/${news.imageicon}`}>
                             </ContextImage>
                         </ItemFooter>
                     </Items>

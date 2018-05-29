@@ -10,7 +10,6 @@ import FirealarmBg from '../../../Assets/Images/Nyhet2.jpg'
 // import ConstructionBg from '../../../Assets/Images/Nyhet3.jpg'
 
 export const Container = styled.div `
-    background-image: url(${FirealarmBg});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -130,7 +129,6 @@ export const ContextImage = styled.img`
     height: 30px;
     width: 30px;
     margin-right: 16px;
-    background-image: url(${FirealarmIcon});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

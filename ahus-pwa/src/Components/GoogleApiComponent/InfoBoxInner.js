@@ -15,7 +15,7 @@ const CustomInfoBox = styled.div`
     min-height: 100px
     display: flex;
     flex-flow: column nowrap;
-    background: white;
+    background: rgba(255, 255, 255, 0.90);
     padding: 1rem;
     border-radius: 10px;
     font-family: 'Chronicle';

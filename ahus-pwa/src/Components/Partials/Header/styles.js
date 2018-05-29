@@ -3,6 +3,7 @@ import { breakpoint } from '../../../Assets/Scripts/theme/mixins';
 import { Link } from 'react-router-dom'
 import logo from '../../../Assets/Images/Logga192x192.svg'
 import arrow from '../../../Assets/Images/Arrow-down.svg'
+import arrowBack from '../../../Assets/Images/Arrow-back.svg'
 
 export const HeaderContainer = styled.header`
     display: flex;
@@ -122,4 +123,18 @@ export const Logo = styled.div`
     background-size: contain;
     height: 50px;
     width: 64px;
+`;
+
+export const Back = styled(Link)`
+    position: absolute;
+    left: 30px;
+    height: 25px;
+    width: 25px;
+    background-image: url(${arrowBack});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    ${breakpoint.up('m')`
+        display: none;
+    `}
 `;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { CampusContainer, Select, Option, StyledLink, Logo, SelectWrapper } from './styles';
+import { CampusContainer, Select, Option, StyledLink, Logo, SelectWrapper, Back } from './styles';
 import axios from 'axios';
 
 // The Header creates links that can be used to navigate
@@ -19,6 +19,7 @@ class HeaderCampus extends Component {
     render() {
     return(
             <CampusContainer>
+                <Back to=''></Back>
                 <StyledLink to='/' alt="Logo-Hem" name="Logo"><Logo></Logo></StyledLink>
                 <SelectWrapper>
                     <Select onChange={this.props.changeCampus}>

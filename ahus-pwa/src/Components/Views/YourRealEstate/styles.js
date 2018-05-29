@@ -141,7 +141,7 @@ export const MainLeft = styled.div`
         width: 600px;
     `}
     ${breakpoint.down('m')`
-        width: 100%
+        width: unset;
         height: unset;
         margin: 10px 0px 10px 0px;
     `}
@@ -177,6 +177,7 @@ export const LeftText = styled.p`
     line-height: 23px;
     padding: 0px 20px 20px 20px;
     margin: 0px;
+    width: unset;
     display: inline;
 `;
 
@@ -275,6 +276,9 @@ export const ImageContactText = styled.p`
     display: inline;
     padding: 20px;
     width: 336px;
+    ${breakpoint.down('xs')`
+        width: unset;
+    `}
 `;
 
 export const ImageContactAnchor = styled.a`
@@ -283,6 +287,7 @@ export const ImageContactAnchor = styled.a`
     &:hover{
         color: #95afcf;
     }
+    word-break: break-all;
 `;
 
 // ROW 4

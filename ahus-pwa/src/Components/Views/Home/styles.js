@@ -19,9 +19,6 @@ export const Wrapper = styled.div`
     ${breakpoint.down('xl')`
         margin: 0px;
     `}
-    ${breakpoint.down('xs')`
-        padding: 10px;
-    `}
 `;
 export const Row = styled.div`
     display: flex;
@@ -51,6 +48,9 @@ export const MapWrapper = styled.div`
 export const ContainerText = styled.div`
     display: inline-block;
     width: 576px;
+    ${breakpoint.down('m')`
+        padding: 5px;
+    `}
 `;
 
 export const WrapperText = styled.div`
@@ -67,6 +67,9 @@ export const Title = styled.h1`
     line-height: 30px;
     margin: 0px;
     padding: 16px;
+    ${breakpoint.down('s')`
+        padding: 16px 0px 0px 0px;
+    `}
 `;
 
 export const TitleSub = styled.h4`
@@ -76,6 +79,12 @@ export const TitleSub = styled.h4`
     line-height: 19px;
     margin: 0px;
     padding: 0px 16px 0px 16px;
+    ${breakpoint.down('s')`
+        padding: 16px 0px 10px 0px;
+    `}
+    ${breakpoint.down('xs')`
+        padding: 10px 0px 8px 0px;
+    `}
 `;
 
 export const Text = styled.p`
@@ -87,10 +96,16 @@ export const Text = styled.p`
     margin: 0px;
     padding: 16px;
     ${breakpoint.down('s')`
+        padding: 16px 0px 10px 0px;
+    `}
+    ${breakpoint.down('xs')`
         :nth-child(2) {
             display: none;
         }
+        padding: 10px 0px 8px 0px;
+
     `}
+
 `;
 
 // BUTTON STYLE
