@@ -28,8 +28,9 @@ class App extends Component {
         })
     }
 
-    componentDidMount(){
-        axios.get(`http://127.0.0.1:8000/api/campus`)
+    async componentDidMount(){
+        setTimeout(() => this.setState({ loading: false }), 1500);
+        const res = await axios.get(`http://127.0.0.1:8000/api/campus`)
             .then(res => {
                 const campuses = res.data.campus[0];
                 this.setState({
