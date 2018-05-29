@@ -17,11 +17,6 @@ class Home extends Component {
         super(props);
     }
 
-    componentDidUpdate(){
-        console.log("HOME Props")
-        console.log(this.props)
-    }
-
   render() {
     return (
       <Container>

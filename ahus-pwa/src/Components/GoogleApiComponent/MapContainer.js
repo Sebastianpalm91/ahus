@@ -52,7 +52,7 @@ class MapContainer extends Component {
     }
 
     componentDidUpdate(){
-        console.log("MAP Props POST UP")
+        console.log("MAP Props POST UP");
         console.log(this.props)
     }
     render() {
@@ -64,7 +64,7 @@ class MapContainer extends Component {
                     style={{margineft: '20px'}}
                 >
                 <Marker
-                  position={{ lat: 57.707756, lng: 11.978284 }}
+                  position={newCenter}
                   onClick={this.props.onToggleOpen}
                 />
                 {

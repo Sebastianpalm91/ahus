@@ -13,10 +13,7 @@ class Main extends Component {
     constructor(props){
         super(props)
     }
-    componentDidUpdate(){
-        console.log("MAIN Props")
-        console.log(this.props)
-    }
+    
     render() {
         return (
                 <TransitionGroup className="transition-group">
