@@ -26,7 +26,8 @@
             }
 
             .flex-center {
-                align-items: center;
+                /* align-items: center; */
+                margin-top: 2em;
                 display: flex;
                 justify-content: center;
             }
@@ -43,6 +44,29 @@
 
             .content {
                 text-align: center;
+            }
+
+            .usage {
+                list-style: none;
+                width: 50%;
+                margin: auto;
+                padding: 0;
+            }
+
+            .usage_step {
+                margin-top: 2em;
+                border: 3px solid gray;
+                border-radius: 5px;
+            }
+
+            .usage_step h3 {
+                border-bottom: 1px solid darkgray;
+                padding-bottom: 1em;
+            }
+
+            .usage_step p, li {
+                color: gray;
+                font-weight: bold;
             }
 
             .title {
@@ -66,29 +90,29 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Welcome to the API for Akademiska hus API
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <h2>Usage</h2>
+                <ul class="usage">
+                    <li class="usage_step">
+                        <h3>Endpoint</h3>
+                        <p>The API starts at endpoint /api/</p>
+                    </li>
+                    <li class="usage_step">
+                        <h3>Allowed paths</h3>
+                        <p>
+                            <ul>
+                                <li>/issue: Get an object containing an array of all issues.</li>
+                                <li>/news: Get an object containing an array of all news.</li>
+                                <li>/campus: Get an object containing an array of all campuses.</li>
+                                <li>/user: Get an object containing an array of all users.</li>
+                            </ul>
+                        </p>
+                    </li>
+                </ul>
             </div>
         </div>
     </body>
