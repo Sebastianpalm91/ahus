@@ -1,7 +1,7 @@
 <img src="https://media.giphy.com/media/ld28D1eniDy5W/giphy.gif" width="100%">
 
 
-A site that fetches a random dish from an [api](https://www.themealdb.com) and displays: recipe, instructions, link to recipe source and a link to video instructions. Developed using [react](https://reactjs.org/).
+A issue reporting page for Akademiska Hus. Front end development with [react](https://reactjs.org/) and backend development with [laravel](https://laravel.com/docs/5.6/passport).
 
 ## Documentation
 Only visually appealing in mobile view.
