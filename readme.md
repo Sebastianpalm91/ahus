@@ -16,6 +16,13 @@ Only visually appealing in mobile view.
   $ npm start
 ```
 
+## Development and Design by:
+- Sebastian Palm
+- Johan Sylvan
+
+- Marcus Led
+- Anders Berlander
+
 ## License
 
 [MIT License](LICENSE)
