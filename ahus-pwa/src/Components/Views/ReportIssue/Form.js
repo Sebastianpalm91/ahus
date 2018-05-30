@@ -25,7 +25,9 @@ class Form extends Component {
             [e.target.name]: e.target.value
         });
     };
-    onSubmit = (e) => {
+
+    // That is this in outer scope
+    onSubmit = (e, that) => {
         e.preventDefault();
         // this.props.onSubmit(this.state);
         this.setState({
@@ -51,17 +53,17 @@ class Form extends Component {
         };
         axios.post(`http://127.0.0.1:8000/api/issue`, postIssue )
         .then(function (response) {
-            console.log(postIssue);
-          console.log(response);
+            that.props.updateIssues();
         })
           .catch(function (error) {
             console.log(error);
           });
     };
+
     render() {
       return (
             <Wrapper>
-                <InputContainer onSubmit={this.onSubmit}>
+                <InputContainer onSubmit={(e) => {this.onSubmit(e, this)}}>
                 <InfoContainer>
                     <Title>Felanmälan</Title>
                     <IssueCampus>CAMPUS CITY</IssueCampus>
