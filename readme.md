@@ -19,7 +19,6 @@ Only visually appealing in mobile view.
 ## Development and Design by:
 - Sebastian Palm
 - Johan Sylvan
-
 - Marcus Led
 - Anders Berlander
 
