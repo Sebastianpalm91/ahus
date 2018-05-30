@@ -25,13 +25,34 @@
     text-align: center;
   }
   .App-header {
-    background-color: #222;
-    height: 150px;
+    display: flex;
+    align-items: center;
+    background-color: #E8EDF0;
+    height: 100px;
     padding: 20px;
     color: white;
   }
+  .logo {
+      display: flex;
+      margin: auto;
+      height: 60px;
+      width: 60px;
+  }
+  .loadingWrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: auto;
+  }
   .App-intro {
     font-size: large;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  .loading {
+      display: flex;
+      justify-content: center;
+      margin: auto;
   }
 </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48455722-2"></script>
@@ -49,11 +70,14 @@
     <div id="root">
         <div class="App">
             <div class="App-header">
-                <h2>Akademiska Hus</h2>
+                <img class="logo" src="./icon.svg" alt="">
             </div>
-            <p class="App-intro">
-                Vi laddar sidan just nu...
-            </p>
+            <div class="loadingWrapper">
+                <img class="loading" src="https://i.pinimg.com/originals/dc/66/53/dc6653448a617b0564541708101d3eac.gif" alt="" height="300px" width="450px">
+                <p class="App-intro">
+                    Ta en slurp av ditt kaffe medans vi laddar sidan...
+                </p>
+            </div>
         </div>
     <script>
     if ('serviceWorker' in navigator) {

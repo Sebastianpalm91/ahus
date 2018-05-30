@@ -60,6 +60,7 @@ export const WrapperText = styled.div`
 
 
 export const Title = styled.h1`
+    font-family: SceneMedium;
     text-align: left;
     color: #FFFFFF;
     font-size: 28px;
@@ -73,6 +74,7 @@ export const Title = styled.h1`
 `;
 
 export const TitleSub = styled.h4`
+    font-family: SceneMedium;
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 500;
@@ -88,6 +90,7 @@ export const TitleSub = styled.h4`
 `;
 
 export const Text = styled.p`
+    font-family: ChronicleRoman;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 300;
@@ -103,54 +106,5 @@ export const Text = styled.p`
             display: none;
         }
         padding: 10px 0px 8px 0px;
-
     `}
-
 `;
-
-// BUTTON STYLE
-
-// export const ButtonWrapper = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     margin-top 20px;
-// `;
-
-// export const ButtonCity = styled.button`
-//     width: 80px;
-//     height: 40px;
-//     font-size: 11px;
-//     border-radius: 5px;
-//     margin: 15px;
-//     border: none;
-//     outline: none;
-//     ${breakpoint.down('m')`
-//         height: 50px;
-//         width: 150px;
-//     `}
-//     ${breakpoint.down('s')`
-//         height: 40px;
-//         width: 100px;
-//         font-size: 18px;
-//     `}
-// `;
-//
-// export const ButtonCampus = styled.button`
-//     width: 80px;
-//     height: 40px;
-//     font-size: 11px;
-//     border-radius: 5px;
-//     margin: 15px;
-//     border: none;
-//     outline: none;
-//
-//     ${breakpoint.down('m')`
-//         height: 50px;
-//         width: 150px;
-//     `}
-//     ${breakpoint.down('s')`
-//         height: 40px;
-//         width: 100px;
-//         font-size: 18px;
-//     `}
-// `;
