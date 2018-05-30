@@ -12,7 +12,6 @@ class Contact extends Component {
       .then(res => {
         const users = res.data.users;
         this.setState({ users });
-        console.log(users);
       })
   }
 

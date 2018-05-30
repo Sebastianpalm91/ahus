@@ -3,6 +3,7 @@ import { Li, StyledLink, Logo, MenuWrapper, Ul, Select, Option, SelectWrapper, B
 import { stack as Menu } from 'react-burger-menu'
 import axios from 'axios';
 import burger from './img/burgericon.svg'
+import SimpleLineIcon from 'react-simple-line-icons';
 
 class Hamburger extends Component {
     state = {
@@ -26,11 +27,6 @@ class Hamburger extends Component {
                     customBurgerIcon={ <Burger src={`${burger}`}></Burger> }>
                     <Logo></Logo>
                     <Ul>
-                        <Li><StyledLink className="menu-item" to='/' alt="Hem">Hem</StyledLink></Li>
-                        <Li><StyledLink className="menu-item" to='/felanmalan'>Felanmälan</StyledLink></Li>
-                        <Li><StyledLink className="menu-item" to='/nyheter'>Nyheter</StyledLink></Li>
-                        <Li><StyledLink className="menu-item" to='/kontakt'>Kontakt</StyledLink></Li>
-                        <Li><StyledLink className="menu-item" to='/dinfastiget'>Din Fastighet</StyledLink></Li>
                         <Li>
                             <SelectWrapper>
                                 <Select onChange={this.props.changeCampus}>
@@ -41,6 +37,12 @@ class Hamburger extends Component {
                                 </Select>
                             </SelectWrapper>
                         </Li>
+                        <Li><StyledLink className="menu-item" to='/felanmalan'>Felanmälan</StyledLink></Li>
+                        <Li><StyledLink className="menu-item" to='/nyheter'>Nyheter</StyledLink></Li>
+                        <Li><StyledLink className="menu-item" to='/kontakt'>Kontakt</StyledLink></Li>
+                        <Li><StyledLink className="menu-item" to='/dinfastiget'>Din Fastighet</StyledLink></Li>
+                        <Li><StyledLink className="menu-item" to='/admin/login'><SimpleLineIcon name="login"/></StyledLink></Li>
+                        <Li><StyledLink className="menu-item" to='/akademiskahus'>Akademiskahus.se</StyledLink></Li>
                     </Ul>
                 </Menu>
             </MenuWrapper>
