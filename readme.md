@@ -1,4 +1,4 @@
-<img src="https://media.giphy.com/media/l2RnnslgkgQa8Vs8E/giphy.gif" width="100%">
+<img src="https://media.giphy.com/media/ld28D1eniDy5W/giphy.gif" width="100%">
 
 
 A site that fetches a random dish from an [api](https://www.themealdb.com) and displays: recipe, instructions, link to recipe source and a link to video instructions. Developed using [react](https://reactjs.org/).
